@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WeHarvest</string>
+    <string name="activity_login_username_hint">Usuario</string>
+    <string name="activity_login_password_hint">Contraseña</string>
+    <string name="activity_login_button">Iniciar Sesión</string>
+    <string name="activity_login_create_account">Registrarse</string>
+    <string name="hello_blank_fragment">Hello world</string>
+</resources>
