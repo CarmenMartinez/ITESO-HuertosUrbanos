@@ -3,4 +3,8 @@
     <dimen name="activity_login_edit_text_dimen">280dp</dimen>
     <dimen name="activity_login_button_dimen">300dp</dimen>
     <dimen name="activity_login_gap">20dp</dimen>
+
+    <dimen name="activity_recipe_buttons_margin">10dp</dimen>
+    <dimen name="buttons_width">300dp</dimen>
+
 </resources>
