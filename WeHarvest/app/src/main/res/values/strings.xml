@@ -12,6 +12,12 @@
     <string name="activity_recipes_ground">Tierra</string>
     <string name="activity_recipes_compound">Composta</string>
     <string name="activity_recipes_vertical_orchard">Huerto Vertical</string>
+    <string name="title_activity_explore">ActivityExplore</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 
 
 </resources>
