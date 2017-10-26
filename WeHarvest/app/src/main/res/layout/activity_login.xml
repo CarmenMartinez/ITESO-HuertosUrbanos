@@ -22,7 +22,7 @@
             android:gravity="center"
             android:textSize="25sp"
             android:layout_marginTop="10dp"
-            android:text="Huertos Urbanos"
+            android:text="@string/activity_login_text_view"
             android:textStyle="bold"
             android:layout_marginBottom="@dimen/activity_login_gap"/>
 
@@ -35,7 +35,7 @@
             android:inputType="textEmailAddress"/>
 
         <EditText
-            android:id="@+id/activity_login_pwd"
+            android:id="@+id/activity_login_password"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
             android:hint="@string/activity_login_password_hint"
