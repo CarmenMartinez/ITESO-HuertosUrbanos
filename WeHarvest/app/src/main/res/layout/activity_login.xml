@@ -52,6 +52,7 @@
         android:onClick="onClick"/>
 
     <Button
+        android:id="@+id/activity_login_create_account"
         android:layout_width="@dimen/buttons_width"
         android:layout_height="wrap_content"
         android:text="@string/activity_login_create_account"
