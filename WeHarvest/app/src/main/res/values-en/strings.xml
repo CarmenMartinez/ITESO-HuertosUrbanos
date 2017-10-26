@@ -4,4 +4,12 @@
     <string name="activity_login_password_hint">Password</string>
     <string name="activity_login_button">LOG IN</string>
     <string name="activity_login_create_account">CREATE NEW ACCOUNT</string>
+
+
+    <string name="activity_recipes_create_orchard">¿How to create and Orchard?</string>
+    <string name="activity_recipes_seeds">Seeds</string>
+    <string name="activity_recipes_ground">Ground</string>
+    <string name="activity_recipes_compound">Compound</string>
+    <string name="activity_recipes_vertical_orchard">Vertical orchard</string>
+
 </resources>

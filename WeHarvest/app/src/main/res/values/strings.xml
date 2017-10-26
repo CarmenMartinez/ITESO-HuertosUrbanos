@@ -5,4 +5,13 @@
     <string name="activity_login_button">Iniciar Sesión</string>
     <string name="activity_login_create_account">Registrarse</string>
     <string name="hello_blank_fragment">Hello world</string>
+
+
+    <string name="activity_recipes_create_orchard">¿Como crear un huerto?</string>
+    <string name="activity_recipes_seeds">Semillas</string>
+    <string name="activity_recipes_ground">Tierra</string>
+    <string name="activity_recipes_compound">Composta</string>
+    <string name="activity_recipes_vertical_orchard">Huerto Vertical</string>
+
+
 </resources>

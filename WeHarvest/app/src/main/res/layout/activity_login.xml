@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.weharvest.ActivityLogin">
 
     <LinearLayout
@@ -44,15 +45,17 @@
 
     <Button
         android:id="@+id/activity_login_signin"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/buttons_width"
         android:layout_height="wrap_content"
         android:text="@string/activity_login_button"
+        style="@style/button"
         android:onClick="onClick"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/buttons_width"
         android:layout_height="wrap_content"
         android:text="@string/activity_login_create_account"
+        style="@style/button"
         android:onClick="onClick"/>
 
 </LinearLayout>
