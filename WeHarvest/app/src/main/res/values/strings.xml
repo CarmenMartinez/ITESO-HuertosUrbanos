@@ -27,6 +27,8 @@
     <string name="activity_create_account_confirm_password_hint">Confirmar contraseña</string>
     <string name="activity_create_account_signup">Registarse</string>
     <string name="activity_create_account_text_view">Registro</string>
+    <string name="activity_login_password_error">Las contraseñas no coinciden</string>
+
 
 
 
