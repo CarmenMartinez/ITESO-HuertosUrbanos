@@ -61,7 +61,7 @@ public class ActivityRecipes extends ActivityBase {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
             }
         });
 

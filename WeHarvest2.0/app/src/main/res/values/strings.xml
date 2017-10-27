@@ -42,7 +42,6 @@
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
 
-
     <string name="slide_1_title">Welcome!</string>
     <string name="slide_1_desc">The easiest way to learn about urban farms and join a community!</string>
 
@@ -70,5 +69,6 @@
     <string name="create_event_place_hint">Enter Place</string>
     <string name="create_description">Enter description</string>
     <string name="create_description_recipe">Enter Recipe Description</string>
+    <string name="create_submit">Create</string>
 
 </resources>
