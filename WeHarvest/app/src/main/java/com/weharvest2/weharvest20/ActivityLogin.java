@@ -1,8 +1,5 @@
-package com.weharvest;
+package com.weharvest2.weharvest20;
 
-import com.weharvest.beans.User;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-
+import com.weharvest2.weharvest20.beans.User;
 
 public class ActivityLogin extends AppCompatActivity {
 
@@ -23,7 +20,7 @@ public class ActivityLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         username = (EditText) findViewById(R.id.activity_login_username);
-        password = (EditText) findViewById(R.id.activity_login_password);
+        password = (EditText) findViewById(R.id.activity_login_pwd);
         signin = (Button) findViewById(R.id.activity_login_signin);
     }
 
@@ -39,12 +36,11 @@ public class ActivityLogin extends AppCompatActivity {
                 startActivity(intent);
                 finish();
                 break;
-            case R.id.activity_login_create_account:
+            case R.id.activity_create_account:
                 Intent intentCreateAccount = new Intent(this, ActivityCreateAccount.class);
                 startActivity(intentCreateAccount);
                 finish();
                 break;
-
         }
     }
 }

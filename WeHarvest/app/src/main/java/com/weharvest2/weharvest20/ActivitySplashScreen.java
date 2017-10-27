@@ -1,10 +1,10 @@
-package com.weharvest;
+package com.weharvest2.weharvest20;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.weharvest.beans.User;
+import com.weharvest2.weharvest20.beans.User;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,7 +25,7 @@ public class ActivitySplashScreen extends AppCompatActivity {
                 if(user.isLogged()){
                     intent = new Intent(ActivitySplashScreen.this,ActivityMain.class);
                 }else {
-                    intent = new Intent(ActivitySplashScreen.this,ActivityInitSlides.class);
+                    intent = new Intent(ActivitySplashScreen.this,ActivityLogin.class);
                 }
                 startActivity(intent);
                 finish();

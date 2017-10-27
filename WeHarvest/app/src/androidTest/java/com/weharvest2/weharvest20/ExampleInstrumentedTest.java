@@ -1,4 +1,4 @@
-package com.weharvest;
+package com.weharvest2.weharvest20;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.weharvest", appContext.getPackageName());
+        assertEquals("com.weharvest2.weharvest20", appContext.getPackageName());
     }
 }
