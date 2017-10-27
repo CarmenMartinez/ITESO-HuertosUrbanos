@@ -1,4 +1,4 @@
-package com.weharvest;
+package com.weharvest2.weharvest20;
 
 import org.junit.Test;
 

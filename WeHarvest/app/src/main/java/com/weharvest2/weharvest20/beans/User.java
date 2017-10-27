@@ -1,10 +1,10 @@
-package com.weharvest.beans;
+package com.weharvest2.weharvest20.beans;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by carmenmartineznuno on 10/25/17.
+ * Created by fernando on 26/10/17.
  */
 
 public class User {

@@ -1,10 +1,10 @@
-package com.weharvest;
+package com.weharvest2.weharvest20;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by luisacfl on 26/10/17.
+ * Created by fernando on 27/10/17.
  */
 
 public class PrefManager {

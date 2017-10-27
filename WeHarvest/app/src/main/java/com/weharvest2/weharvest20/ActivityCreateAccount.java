@@ -1,4 +1,4 @@
-package com.weharvest;
+package com.weharvest2.weharvest20;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,9 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.weharvest.beans.User;
+import com.weharvest2.weharvest20.beans.User;
 
 public class ActivityCreateAccount extends AppCompatActivity {
     protected EditText username;

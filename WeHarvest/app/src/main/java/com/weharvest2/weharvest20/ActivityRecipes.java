@@ -1,12 +1,15 @@
-package com.weharvest;
+package com.weharvest2.weharvest20;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ActivityRecipes extends AppCompatActivity {
+import com.weharvest2.weharvest20.gui.ActivityBase;
+
+public class ActivityRecipes extends ActivityBase {
 
     protected Button seeds;
     protected Button ground;
@@ -18,6 +21,8 @@ public class ActivityRecipes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
+
+        onCreateDrawer();
 
         seeds = (Button) findViewById(R.id.activity_recipes_seeds);
         ground = (Button) findViewById(R.id.activity_recipes_ground);
@@ -56,9 +61,10 @@ public class ActivityRecipes extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                
             }
         });
+
 
     }
 }
