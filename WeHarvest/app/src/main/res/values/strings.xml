@@ -4,6 +4,8 @@
     <string name="activity_login_password_hint">Contraseña</string>
     <string name="activity_login_button">Iniciar Sesión</string>
     <string name="activity_login_create_account">Registrarse</string>
+    <string name="activity_login_text_view">Inicio de sesión</string>
+
     <string name="hello_blank_fragment">Hello world</string>
 
 
@@ -37,5 +39,16 @@
     <string name="slide_4_desc">Haz consultas a la base de datos para conocer los diferentes productos que puedes sembrar en tu ciudad por temporada</string>
 
     <string name="play_again">Volver a ver</string>
+
+    <string name="activity_create_account_username_hint">Nombre de usuario</string>
+    <string name="activity_create_account_password_hint">Contraseña</string>
+    <string name="activity_create_account_confirm_password_hint">Confirmar contraseña</string>
+    <string name="activity_create_account_signup">Registarse</string>
+    <string name="activity_create_account_text_view">Registro</string>
+    <string name="activity_login_password_error">Las contraseñas no coinciden</string>
+
+
+
+
 
 </resources>

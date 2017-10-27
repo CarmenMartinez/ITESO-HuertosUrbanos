@@ -1,46 +1,42 @@
 package com.weharvest;
 
-import com.weharvest.beans.User;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.weharvest.beans.User;
 
-
-public class ActivityLogin extends AppCompatActivity {
-
+public class ActivityCreateAccount extends AppCompatActivity {
     protected EditText username;
     protected EditText password;
-    protected Button signin;
+    protected EditText confirmPassword;
+    protected Button signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        username = (EditText) findViewById(R.id.activity_login_username);
-        password = (EditText) findViewById(R.id.activity_login_password);
-        signin = (Button) findViewById(R.id.activity_login_signin);
+        setContentView(R.layout.activity_create_account);
+        username = (EditText) findViewById(R.id.activity_create_account_username);
+        password = (EditText) findViewById(R.id.activity_create_account_password);
+        confirmPassword = (EditText) findViewById(R.id.activity_create_account_confirm_password);
+        signup = (Button) findViewById(R.id.activity_create_account_signup);
+
     }
 
     public void onClick(View v){
         switch (v.getId()){
-            case R.id.activity_login_signin:
+            case R.id.activity_create_account_signup:
+                //TODO Check password and confirm password
                 User user = new User();
                 user.setUsername(username.getText().toString());
                 user.setPassword(password.getText().toString());
                 user.savePreferences(this);
 
-                Intent intent = new Intent(this, ActivityMain.class);
-                startActivity(intent);
-                finish();
-                break;
-            case R.id.activity_login_create_account:
-                Intent intentCreateAccount = new Intent(this, ActivityCreateAccount.class);
+                Intent intentCreateAccount = new Intent(this, ActivityMain.class);
                 startActivity(intentCreateAccount);
                 finish();
                 break;

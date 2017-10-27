@@ -19,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityRecipes" />
-        <activity android:name=".ActivityInitSlides">
-        </activity>
+        <activity android:name=".ActivityCreateAccount"></activity>
+        <activity android:name=".ActivityInitSlides"></activity>
     </application>
 
 </manifest>
