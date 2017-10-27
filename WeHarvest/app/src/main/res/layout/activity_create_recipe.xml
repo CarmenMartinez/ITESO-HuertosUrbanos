@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <EditText
+        android:id="@+id/activity_recipe_create"
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/create_recipe_hint"/>
+
+    <Spinner
+        android:id="@+id/activity_classification_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:hint="@string/create_event_place_hint"/>
+
+    <EditText
+        android:id="@+id/activity_recipe_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/create_description_recipe"
+        android:paddingLeft="20dp"/>
+
+    <Button
+        android:id="@+id/saveEvent"
+        android:style="@style/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/submit" />
+
+
+</LinearLayout>
