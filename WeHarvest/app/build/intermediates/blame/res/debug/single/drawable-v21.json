@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/carmenmartineznuno/.android/build-cache/24831bc3139e2c2888ec94cacdd8c4005042f52f/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/carmenmartineznuno/.android/build-cache/24831bc3139e2c2888ec94cacdd8c4005042f52f/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/carmenmartineznuno/.android/build-cache/24831bc3139e2c2888ec94cacdd8c4005042f52f/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/res/merged/debug/drawable-v21/design_password_eye.xml",
+        "source": "/Users/carmenmartineznuno/.android/build-cache/9cf37a12646d4fee9a0c83df3ce43cd29928d38b/output/res/drawable-v21/design_password_eye.xml"
+    },
+    {
+        "merged": "/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/carmenmartineznuno/.android/build-cache/24831bc3139e2c2888ec94cacdd8c4005042f52f/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/res/merged/debug/drawable-v21/avd_show_password.xml",
+        "source": "/Users/carmenmartineznuno/.android/build-cache/9cf37a12646d4fee9a0c83df3ce43cd29928d38b/output/res/drawable-v21/avd_show_password.xml"
+    },
+    {
+        "merged": "/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/res/merged/debug/drawable-v21/avd_hide_password.xml",
+        "source": "/Users/carmenmartineznuno/.android/build-cache/9cf37a12646d4fee9a0c83df3ce43cd29928d38b/output/res/drawable-v21/avd_hide_password.xml"
+    },
+    {
+        "merged": "/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/res/merged/debug/drawable-v21/design_bottom_navigation_item_background.xml",
+        "source": "/Users/carmenmartineznuno/.android/build-cache/9cf37a12646d4fee9a0c83df3ce43cd29928d38b/output/res/drawable-v21/design_bottom_navigation_item_background.xml"
+    }
+]
