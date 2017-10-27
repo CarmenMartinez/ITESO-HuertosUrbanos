@@ -19,5 +19,23 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="title_activity_welcome">Inicio</string>
+    <string name="next">Siguiente</string>
+    <string name="skip">Saltar</string>
+    <string name="start">Listo</string>
+
+    <string name="slide_1_title">Bienvenido!</string>
+    <string name="slide_1_desc">La manera más fácil de aprender sobre huertos urbanos y hacer comunidad!</string>
+
+    <string name="slide_2_title">Eventos</string>
+    <string name="slide_2_desc">Entérate de los eventos que están siendo organizados!</string>
+
+    <string name="slide_3_title">Aprende</string>
+    <string name="slide_3_desc">Conoce las mejores prácticas para sembrar, cosechar y cocinar!</string>
+
+    <string name="slide_4_title">Pregunta</string>
+    <string name="slide_4_desc">Haz consultas a la base de datos para conocer los diferentes productos que puedes sembrar en tu ciudad por temporada</string>
+
+    <string name="play_again">Volver a ver</string>
 
 </resources>
