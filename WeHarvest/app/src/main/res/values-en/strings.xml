@@ -6,10 +6,30 @@
     <string name="activity_login_create_account">CREATE NEW ACCOUNT</string>
 
 
-    <string name="activity_recipes_create_orchard">¿How to create and Orchard?</string>
+    <string name="activity_recipes_create_orchard">¿How to create an Urban Farm?</string>
     <string name="activity_recipes_seeds">Seeds</string>
     <string name="activity_recipes_ground">Ground</string>
     <string name="activity_recipes_compound">Compound</string>
-    <string name="activity_recipes_vertical_orchard">Vertical orchard</string>
+    <string name="activity_recipes_vertical_orchard">Vertical Farm</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+
+    <string name="slide_1_title">Welcome!</string>
+    <string name="slide_1_desc">The easiest way to learn about urban farms and join a community!</string>
+
+    <string name="slide_2_title">Events</string>
+    <string name="slide_2_desc">Find out about the events that are being organized!</string>
+
+    <string name="slide_3_title">Learn</string>
+    <string name="slide_3_desc">Get to know the best practices to plant, harvest and cook!</string>
+
+    <string name="slide_4_title">Ask</string>
+    <string name="slide_4_desc">Make your queries to the database to know what you can plant in your city by season.</string>
+
+    <string name="play_again">Play Again</string>
 
 </resources>

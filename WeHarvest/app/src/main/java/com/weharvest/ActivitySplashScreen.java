@@ -21,11 +21,11 @@ public class ActivitySplashScreen extends AppCompatActivity {
             public void run() {
                 User user = new User().getUser(ActivitySplashScreen.this);
                 Intent intent;
-                //user is loged
+                //user is logged
                 if(user.isLogged()){
                     intent = new Intent(ActivitySplashScreen.this,ActivityMain.class);
                 }else {
-                    intent = new Intent(ActivitySplashScreen.this,ActivityLogin.class);
+                    intent = new Intent(ActivitySplashScreen.this,ActivityInitSlides.class);
                 }
                 startActivity(intent);
                 finish();
