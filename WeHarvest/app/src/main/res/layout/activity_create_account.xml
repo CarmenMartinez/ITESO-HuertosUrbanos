@@ -26,17 +26,17 @@
             android:layout_marginBottom="@dimen/activity_login_gap"/>
 
         <EditText
-            android:id="@+id/activity_create_account_email"
-            android:layout_width="@dimen/activity_login_edit_text_dimen"
-            android:layout_height="wrap_content"
-            android:hint="Email" />
-
-        <EditText
             android:id="@+id/activity_create_account_username"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
             android:hint="@string/activity_create_account_username_hint"
             android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/activity_create_account_email"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:hint="Email" />
 
         <EditText
             android:id="@+id/activity_create_account_password"

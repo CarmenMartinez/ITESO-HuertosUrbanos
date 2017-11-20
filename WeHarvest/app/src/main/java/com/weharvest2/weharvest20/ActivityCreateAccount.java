@@ -38,6 +38,7 @@ public class ActivityCreateAccount extends AppCompatActivity {
                 String userId = mDatabase.push().getKey();
 
                 User user = new User(username.getText().toString(), password.getText().toString(), email.getText().toString());
+                user.setLogged(true);
                 user.savePreferences(this);
 
                 mDatabase.child(userId).setValue(user);
