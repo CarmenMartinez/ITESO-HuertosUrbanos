@@ -26,6 +26,12 @@
             android:layout_marginBottom="@dimen/activity_login_gap"/>
 
         <EditText
+            android:id="@+id/activity_create_account_email"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:hint="Email" />
+
+        <EditText
             android:id="@+id/activity_create_account_username"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
@@ -45,6 +51,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/activity_create_account_confirm_password_hint"
             android:inputType="textPassword"/>
+
+
 
     </LinearLayout>
 

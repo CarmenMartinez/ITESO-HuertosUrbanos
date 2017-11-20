@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 public class User {
     private  String username;
     private String password;
+    private String email;
     private boolean isLogged;
 
     public User getUser(Context context) {
@@ -20,6 +21,16 @@ public class User {
         user.setPassword(sharedPreferences.getString("PWD",null));
         user.setLogged(sharedPreferences.getBoolean("LOGGED",false));
         return user;
+    }
+
+    public User () {
+
+    }
+
+    public User (String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
     }
 
     public String getUsername(){
