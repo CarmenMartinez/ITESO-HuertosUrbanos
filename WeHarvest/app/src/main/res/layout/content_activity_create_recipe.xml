@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.weharvest2.weharvest20.ActivityRecipes"
+    tools:showIn="@layout/app_bar_activity_create_recipe">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="@style/textTitle"
+            android:layout_marginTop="10dp"
+            android:text="@string/create_title" />
+
+        <EditText
+            android:id="@+id/activity_login_username"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_recipe_hint"
+            android:inputType="textEmailAddress"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/simpleText"
+            android:text="@string/create_type" />
+
+
+        <Spinner
+            android:id="@+id/activity_create_recipe_type"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            style="@style/textTitle"
+            android:entries="@array/types_recipes"/>
+
+        <EditText
+            android:id="@+id/activity_login_pwd"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:hint="@string/create_description_recipe"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_login_signin"
+        android:layout_width="@dimen/buttons_width"
+        android:layout_height="wrap_content"
+        android:text="@string/create_submit"
+        style="@style/button"
+        android:onClick="create"/>
+
+</LinearLayout>
+
