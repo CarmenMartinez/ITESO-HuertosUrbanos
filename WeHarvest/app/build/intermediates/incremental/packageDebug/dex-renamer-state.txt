@@ -1,7 +1,0 @@
-#Thu Oct 26 23:11:08 CDT 2017
-base.0=/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3304beae291bac9c56490540213a0d5b02985cb1
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_29e3583d0a58c883bf205c8c5af7cde5b7b3814c/classes.dex
-base.1=/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_29e3583d0a58c883bf205c8c5af7cde5b7b3814c
-file.0=/Users/carmenmartineznuno/Documents/ITESO/5to Semestre/Moviles/Proyecto/ITESO-HuertosUrbanos/WeHarvest/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3304beae291bac9c56490540213a0d5b02985cb1/classes.dex

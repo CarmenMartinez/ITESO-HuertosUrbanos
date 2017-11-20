@@ -1,37 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical">
-
-    <EditText
-        android:id="@+id/activity_recipe_create"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/app_bar_activity_create_recipe"
         android:layout_width="match_parent"
-        android:paddingLeft="20dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/create_recipe_hint"/>
+        android:layout_height="match_parent" />
 
-    <Spinner
-        android:id="@+id/activity_classification_spinner"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:hint="@string/create_event_place_hint"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_activity_main"
+        app:menu="@menu/activity_main_drawer" />
 
-    <EditText
-        android:id="@+id/activity_recipe_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/create_description_recipe"
-        android:paddingLeft="20dp"/>
-
-    <Button
-        android:id="@+id/saveEvent"
-        android:style="@style/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/submit" />
-
-
-</LinearLayout>
+</android.support.v4.widget.DrawerLayout>
