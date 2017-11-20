@@ -121,7 +121,7 @@ public class ActivityInitSlides extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(ActivityInitSlides.this, ActivityLogin.class));
+        startActivity(new Intent(ActivityInitSlides.this, ActivitySplashScreen.class));
         finish();
     }
 
@@ -202,5 +202,4 @@ public class ActivityInitSlides extends AppCompatActivity {
             container.removeView(view);
         }
     }}
-
 

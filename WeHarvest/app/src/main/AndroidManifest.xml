@@ -19,11 +19,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ActivityLogin" />
         <activity android:name=".ActivitySplashScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ActivityCreateAccount" />
         <activity
@@ -51,9 +46,19 @@
         <activity
             android:name=".ActivityFilter"
             android:label="Sowing and Harvesting"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">ç
 
         </activity>
+
+        <activity android:name=".ActivityInitSlides"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -87,7 +87,7 @@
         <item>Composta</item>
         <item>Huerto Vertical</item>
     </string-array>
-
+    <string name="prueba">Prueba</string>
     <string name="query_agricultural_cycle">Ciclo Agrícola</string>
     <string name="query_season">Época</string>
     <string name="query_state">Estado</string>
