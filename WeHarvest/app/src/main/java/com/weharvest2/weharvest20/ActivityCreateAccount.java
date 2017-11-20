@@ -28,7 +28,6 @@ public class ActivityCreateAccount extends AppCompatActivity {
         confirmPassword = (EditText) findViewById(R.id.activity_create_account_confirm_password);
         email = (EditText) findViewById(R.id.activity_create_account_email);
         signup = (Button) findViewById(R.id.activity_create_account_signup);
-
     }
 
     public void onClick(View v){

@@ -20,6 +20,7 @@ public class User {
         user.setUsername(sharedPreferences.getString("USER",null));
         user.setPassword(sharedPreferences.getString("PWD",null));
         user.setLogged(sharedPreferences.getBoolean("LOGGED",false));
+        user.setEmail(sharedPreferences.getString("EMAIL",null));
         return user;
     }
 
@@ -30,6 +31,14 @@ public class User {
     public User (String username, String password, String email) {
         this.username = username;
         this.password = password;
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
     }
 

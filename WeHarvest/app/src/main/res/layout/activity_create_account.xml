@@ -36,7 +36,8 @@
             android:id="@+id/activity_create_account_email"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
-            android:hint="Email" />
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
 
         <EditText
             android:id="@+id/activity_create_account_password"
