@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,44 +35,35 @@ public class ActivityLogin extends AppCompatActivity {
     public void onClick(View v){
         switch (v.getId()){
             case R.id.activity_login_signin:
-                /*mDatabase.child(username.getText().toString()).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        System.out.println(dataSnapshot.getValue());
-                    }
 
-                    @Override
-                    public void onCancelled(DatabaseError error) {
-                        Log.w("ADIOS", "Failed to read value.", error.toException());
-                    }
-                });*/
-
-
-                /*mDatabase.addValueEventListener(new ValueEventListener() {
+                mDatabase.child(username.getText().toString());
+                mDatabase.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         User user = dataSnapshot.getValue(User.class);
-                        if (user != null)
-                            System.out.println(user.getPassword());
-                            System.out.println(user.getUsername());
-                            System.out.println(user.getEmail());
+                        if (user != null && user.getUsername() != "") {
+                            Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "USUARIO NO VALIDO", Toast.LENGTH_LONG).show();
+                        }
+
                     }
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
-
+                        Toast.makeText(getApplicationContext(), "Canceled", Toast.LENGTH_LONG).show();
                     }
-                });*/
+                });
 
                 /*User user = new User();
                 user.setUsername(username.getText().toString());
                 user.setPassword(password.getText().toString());
                 user.savePreferences(this);*/
-
-                Intent intent = new Intent(this, ActivityMain.class);
-                startActivity(intent);
-                finish();
                 break;
+
             case R.id.activity_create_account:
                 Intent intentCreateAccount = new Intent(this, ActivityCreateAccount.class);
                 startActivity(intentCreateAccount);

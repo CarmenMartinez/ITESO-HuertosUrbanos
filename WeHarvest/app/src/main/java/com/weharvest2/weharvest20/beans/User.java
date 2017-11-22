@@ -25,7 +25,9 @@ public class User {
     }
 
     public User () {
-
+        username = "";
+        password = "";
+        email = "";
     }
 
     public User (String username, String password, String email) {

@@ -34,13 +34,11 @@ public class ActivityCreateAccount extends AppCompatActivity {
         switch (v.getId()){
             case R.id.activity_create_account_signup:
                 //TODO Check password and confirm password
-                String userId = mDatabase.push().getKey();
-
                 User user = new User(username.getText().toString(), password.getText().toString(), email.getText().toString());
                 user.setLogged(true);
                 user.savePreferences(this);
 
-                mDatabase.child(userId).setValue(user);
+                mDatabase.child(username.getText().toString()).setValue(user);
                 Intent intentCreateAccount = new Intent(this, ActivityMain.class);
                 startActivity(intentCreateAccount);
                 finish();
