@@ -21,7 +21,8 @@ public class ActivityLogin extends AppCompatActivity {
     protected EditText username;
     protected EditText password;
     protected Button signin;
-    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("users");
+    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +36,12 @@ public class ActivityLogin extends AppCompatActivity {
     public void onClick(View v){
         switch (v.getId()){
             case R.id.activity_login_signin:
-
-                mDatabase.child(username.getText().toString());
-                mDatabase.addValueEventListener(new ValueEventListener() {
+                DatabaseReference userDBR = mDatabase.child("users").child(username.getText().toString());
+                userDBR.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         User user = dataSnapshot.getValue(User.class);
-                        if (user != null && user.getUsername() != "") {
+                        if (user != null) {
                             Toast.makeText(getApplicationContext(),
                                     user.getUsername() + " " + user.getPassword(),
                                     Toast.LENGTH_LONG).show();
