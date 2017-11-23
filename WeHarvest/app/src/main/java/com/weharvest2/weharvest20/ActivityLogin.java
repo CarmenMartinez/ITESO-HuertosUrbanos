@@ -42,6 +42,9 @@ public class ActivityLogin extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         User user = dataSnapshot.getValue(User.class);
                         if (user != null && user.getUsername() != "") {
+                            Toast.makeText(getApplicationContext(),
+                                    user.getUsername() + " " + user.getPassword(),
+                                    Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
                             startActivity(intent);
                             finish();
