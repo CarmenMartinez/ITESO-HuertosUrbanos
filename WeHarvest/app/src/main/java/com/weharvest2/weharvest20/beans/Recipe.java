@@ -4,19 +4,19 @@ package com.weharvest2.weharvest20.beans;
  * Created by fernando on 22/11/17.
  */
 
-public class Post {
-    private User user;
+public class Recipe {
+    private String username;
     private String titulo;
     private String contenido;
     private String fecha;
     private String categoria;
 
-    public Post() {
+    public Recipe() {
 
     }
 
-    public Post(User user, String titulo, String contenido, String fecha, String categoria) {
-        this.user = user;
+    public Recipe(String username, String titulo, String contenido, String fecha, String categoria) {
+        this.username = username;
         this.titulo = titulo;
         this.contenido = contenido;
         this.fecha = fecha;
@@ -24,12 +24,12 @@ public class Post {
     }
 
 
-    public User getUser() {
-        return user;
+    public String getUser() {
+        return username;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(String username) {
+        this.username = username;
     }
 
     public String getTitulo() {

@@ -1,21 +1,9 @@
 package com.weharvest2.weharvest20;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.MenuInflater;
-import android.view.View;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +12,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.weharvest2.weharvest20.beans.User;
+import com.weharvest2.weharvest20.beans.Recipe;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
 public class ActivityMain extends ActivityBase
@@ -35,6 +23,7 @@ public class ActivityMain extends ActivityBase
     protected TextView titulo;
     protected TextView fecha;
     protected TextView categoria;
+    protected FloatingActionButton create;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     @Override
@@ -49,19 +38,22 @@ public class ActivityMain extends ActivityBase
         contenido = (TextView) findViewById(R.id.activity_main_contenido);
         fecha = (TextView) findViewById(R.id.activity_main_fecha);
         categoria = (TextView) findViewById(R.id.activity_main_categoria);
+        create = (FloatingActionButton) findViewById(R.id.activity_main_create);
 
-        DatabaseReference userDBR = mDatabase.child("posts");
+
+        DatabaseReference userDBR = mDatabase.child("recipes");
         userDBR.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                User user = dataSnapshot.getValue(User.class);
-                if (user != null) {
-                    Toast.makeText(getApplicationContext(),
+                Recipe recipe = dataSnapshot.getValue(Recipe.class);
+                if (recipe != null) {
+                    /*Toast.makeText(getApplicationContext(),
                             user.getUsername() + " " + user.getPassword(),
                             Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
                     startActivity(intent);
-                    finish();
+                    finish();*/
+
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "USUARIO NO VALIDO", Toast.LENGTH_LONG).show();
@@ -75,5 +67,11 @@ public class ActivityMain extends ActivityBase
             }
         });
 
+    }
+
+    public void createRecipe() {
+        Intent intent = new Intent(this, ActivityCreateRecipe.class);
+        startActivity(intent);
+        finish();
     }
 }

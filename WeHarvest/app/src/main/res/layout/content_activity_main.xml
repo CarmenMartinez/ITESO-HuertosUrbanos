@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView01"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,41 +10,70 @@
     tools:context="com.weharvest2.weharvest20.ActivityMain"
     tools:showIn="@layout/app_bar_activity_main">
 
-    <TextView
-        android:id="@+id/activity_main_usuario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="USUARIO"/>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/activity_main_titulo"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TITULO"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
 
-    <TextView
-        android:id="@+id/activity_main_contenido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CONTENIDO"/>
+        <TextView
+            android:id="@+id/activity_main_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="USUARIO"/>
 
-    <TextView
-        android:id="@+id/activity_main_fecha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FECHA"/>
+        <TextView
+            android:id="@+id/activity_main_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TITULO"/>
 
-    <TextView
-        android:id="@+id/activity_main_categoria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CATEGORIA"/>
+        <TextView
+            android:id="@+id/activity_main_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONTENIDO"/>
 
-    <ImageView
+        <TextView
+            android:id="@+id/activity_main_fecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FECHA"/>
+
+        <TextView
+            android:id="@+id/activity_main_categoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CATEGORIA"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/publication" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_main_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/publication" />
-
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:layout_marginRight="20dp"
+        app:backgroundTint="@color/buttonsColor"
+        android:src="@mipmap/add"
+        android:onClick="createRecipe"/>
 
 </LinearLayout>
-</ScrollView>
+
