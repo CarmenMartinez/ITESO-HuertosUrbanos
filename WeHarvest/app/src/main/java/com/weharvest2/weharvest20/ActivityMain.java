@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -69,9 +70,8 @@ public class ActivityMain extends ActivityBase
 
     }
 
-    public void createRecipe() {
+    public void createRecipe(View view) {
         Intent intent = new Intent(this, ActivityCreateRecipe.class);
         startActivity(intent);
-        finish();
     }
 }
