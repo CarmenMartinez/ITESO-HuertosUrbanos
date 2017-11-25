@@ -46,19 +46,29 @@ public class ActivityMain extends ActivityBase
         userDBR.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                Recipe recipe = dataSnapshot.getValue(Recipe.class);
+                Iterable<DataSnapshot> contactChildren = dataSnapshot.getChildren();
+                for (DataSnapshot contact : contactChildren) {
+                    Recipe recipe = contact.getValue(Recipe.class);
+                    Toast.makeText(getApplicationContext(),
+                            recipe.getUser() + " " + recipe.getContenido(),
+                            Toast.LENGTH_LONG).show();
+                    usuario.setText(recipe.getUser());
+                    recipe.setContenido(recipe.getContenido());
+
+                }
+                /*Recipe recipe = dataSnapshot.getValue(Recipe.class);
                 if (recipe != null) {
-                    /*Toast.makeText(getApplicationContext(),
+                    Toast.makeText(getApplicationContext(),
                             user.getUsername() + " " + user.getPassword(),
                             Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
                     startActivity(intent);
-                    finish();*/
+                    finish();
 
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "USUARIO NO VALIDO", Toast.LENGTH_LONG).show();
-                }
+                }*/
 
             }
 

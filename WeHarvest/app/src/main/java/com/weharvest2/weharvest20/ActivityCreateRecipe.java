@@ -49,9 +49,9 @@ public class ActivityCreateRecipe extends ActivityBase {
     }
 
     public void create(View view){
-
+        String postId = mDatabase.push().getKey();
         Recipe recipe = new Recipe("USUARIO", title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
-        mDatabase.child(spinner.getSelectedItem().toString()).setValue(recipe);
+        mDatabase.child(postId).setValue(recipe);
 
         Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
