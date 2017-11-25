@@ -9,6 +9,7 @@ import android.widget.EditText;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.weharvest2.weharvest20.beans.Session;
 import com.weharvest2.weharvest20.beans.User;
 
 public class ActivityCreateAccount extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class ActivityCreateAccount extends AppCompatActivity {
                 User user = new User(username.getText().toString(), password.getText().toString(), email.getText().toString());
                 user.setLogged(true);
                 user.savePreferences(this);
-
+                Session.setUserSession(user);
                 mDatabase.child(username.getText().toString()).setValue(user);
                 Intent intentCreateAccount = new Intent(this, ActivityMain.class);
                 startActivity(intentCreateAccount);

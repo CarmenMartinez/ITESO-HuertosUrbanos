@@ -14,6 +14,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.weharvest2.weharvest20.beans.Session;
 import com.weharvest2.weharvest20.beans.User;
 
 public class ActivityLogin extends AppCompatActivity {
@@ -45,6 +46,7 @@ public class ActivityLogin extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(),
                                     user.getUsername() + " " + user.getPassword(),
                                     Toast.LENGTH_LONG).show();
+                            Session.setUserSession(user);
                             Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
                             startActivity(intent);
                             finish();
