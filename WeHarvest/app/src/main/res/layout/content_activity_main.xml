@@ -1,79 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.weharvest2.weharvest20.ActivityMain"
-    tools:showIn="@layout/app_bar_activity_main">
-
-<ScrollView
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/activity_coordinator_container"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView01"
-    android:layout_width="fill_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView_activity_main"
+        android:layout_marginTop="62dp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/activity_main_usuario"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="USUARIO"/>
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
 
-        <TextView
-            android:id="@+id/activity_main_titulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TITULO"/>
+            <TextView
+                android:id="@+id/activity_main_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="USUARIO"/>
 
-        <TextView
-            android:id="@+id/activity_main_contenido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CONTENIDO"/>
+            <TextView
+                android:id="@+id/activity_main_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TITULO"/>
 
-        <TextView
-            android:id="@+id/activity_main_fecha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="FECHA"/>
+            <TextView
+                android:id="@+id/activity_main_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CONTENIDO"/>
 
-        <TextView
-            android:id="@+id/activity_main_categoria"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CATEGORIA"/>
+            <TextView
+                android:id="@+id/activity_main_fecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FECHA"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/publication" />
+            <TextView
+                android:id="@+id/activity_main_categoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CATEGORIA"/>
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/publication" />
 
-</ScrollView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/publication" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/publication" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/publication" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/publication" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/activity_main_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:layout_marginRight="20dp"
         app:backgroundTint="@color/buttonsColor"
+        android:layout_margin="10dp"
         android:src="@mipmap/add"
-        android:onClick="createRecipe"/>
+        android:layout_gravity="bottom|right"
+        app:layout_anchor="@id/ScrollView_activity_main"
+        app:layout_anchorGravity="bottom|right|end"
+        android:onClick="createRecipe" />
 
-</LinearLayout>
-
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_main_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/ScrollView_activity_main"
+        app:layout_anchorGravity="bottom|right|end" />-->
+</android.support.design.widget.CoordinatorLayout>
