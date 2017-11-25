@@ -6,16 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-
-    tools:context="com.weharvest.ActivityCreateAccount">
+    tools:context="com.weharvest2.weharvest20.ActivityCreateAccount">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,6 +33,13 @@
             android:inputType="textEmailAddress"/>
 
         <EditText
+            android:id="@+id/activity_create_account_email"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
             android:id="@+id/activity_create_account_password"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
@@ -48,6 +53,8 @@
             android:hint="@string/activity_create_account_confirm_password_hint"
             android:inputType="textPassword"/>
 
+
+
     </LinearLayout>
 
     <Button
@@ -59,3 +66,4 @@
         android:onClick="onClick"/>
 
 </LinearLayout>
+

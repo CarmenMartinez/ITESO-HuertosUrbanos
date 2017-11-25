@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="buttonsColor">#ec974d</color>
+    <color name="OrangeTheme">#ec974d</color>
     <color name="greenTheme">#89d682</color>
     <color name="greenThemeDark">#76ae6f</color>
-
 
     <!-- Screens background color-->
     <color name="bg_screen1">#7BEB9F</color>

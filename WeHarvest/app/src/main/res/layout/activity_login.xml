@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="com.weharvest.ActivityLogin">
+    tools:context="com.weharvest2.weharvest20.ActivityLogin">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,10 +22,9 @@
             android:gravity="center"
             android:textSize="25sp"
             android:layout_marginTop="10dp"
-            android:text="@string/activity_login_text_view"
+            android:text="Huertos Urbanos"
             android:textStyle="bold"
             android:layout_marginBottom="@dimen/activity_login_gap"/>
-
 
         <EditText
             android:id="@+id/activity_login_username"
@@ -35,7 +34,7 @@
             android:inputType="textEmailAddress"/>
 
         <EditText
-            android:id="@+id/activity_login_password"
+            android:id="@+id/activity_login_pwd"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
             android:hint="@string/activity_login_password_hint"
@@ -52,7 +51,7 @@
         android:onClick="onClick"/>
 
     <Button
-        android:id="@+id/activity_login_create_account"
+        android:id="@+id/activity_create_account"
         android:layout_width="@dimen/buttons_width"
         android:layout_height="wrap_content"
         android:text="@string/activity_login_create_account"
@@ -60,3 +59,4 @@
         android:onClick="onClick"/>
 
 </LinearLayout>
+

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "624569365812",
+    "firebase_url": "https://weharvest-72716.firebaseio.com",
+    "project_id": "weharvest-72716",
+    "storage_bucket": "weharvest-72716.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624569365812:android:c2f56e7665902477",
+        "android_client_info": {
+          "package_name": "com.weharvest2.weharvest20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624569365812-hhrp2lqmbsvn8i6kke2fvv6j1j9564uv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.weharvest2.weharvest20",
+            "certificate_hash": "091c16b9b365527da03011a7fc06f80c08c1a400"
+          }
+        },
+        {
+          "client_id": "624569365812-6juavc5vu1torluv0qtb235uub22bvbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYHjvhFdpBHNR9aW12pOoHJBYvzGtd_z4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624569365812-6juavc5vu1torluv0qtb235uub22bvbe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
