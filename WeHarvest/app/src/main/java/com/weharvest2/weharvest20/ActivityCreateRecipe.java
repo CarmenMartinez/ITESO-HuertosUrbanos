@@ -53,7 +53,8 @@ public class ActivityCreateRecipe extends ActivityBase {
         String postId = mDatabase.push().getKey();
         Recipe recipe = new Recipe(Session.getUserSession().getUsername(), title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
         mDatabase.child(postId).setValue(recipe);
-
+        //TODO check the activity.
+        //Options: ActivityRecipes or ActivityMain
         Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
 

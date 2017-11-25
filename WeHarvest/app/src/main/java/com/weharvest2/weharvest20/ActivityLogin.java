@@ -43,9 +43,6 @@ public class ActivityLogin extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         User user = dataSnapshot.getValue(User.class);
                         if (user != null) {
-                            Toast.makeText(getApplicationContext(),
-                                    user.getUsername() + " " + user.getPassword(),
-                                    Toast.LENGTH_LONG).show();
                             Session.setUserSession(user);
                             Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
                             startActivity(intent);
@@ -62,11 +59,6 @@ public class ActivityLogin extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Canceled", Toast.LENGTH_LONG).show();
                     }
                 });
-
-                /*User user = new User();
-                user.setUsername(username.getText().toString());
-                user.setPassword(password.getText().toString());
-                user.savePreferences(this);*/
                 break;
 
             case R.id.activity_create_account:
