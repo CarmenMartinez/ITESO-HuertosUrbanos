@@ -43,13 +43,21 @@ public class ActivityLogin extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         User user = dataSnapshot.getValue(User.class);
                         if (user != null) {
-                            Toast.makeText(getApplicationContext(),
-                                    user.getUsername() + " " + user.getPassword(),
-                                    Toast.LENGTH_LONG).show();
-                            Session.setUserSession(user);
-                            Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
-                            startActivity(intent);
-                            finish();
+                            if(username.getText().toString().equals(""))
+                                username.setError("This field cannot be blank");//TODO cambiar texto por string
+                            else if(password.getText().toString().equals(""))
+                                password.setError("This field cannot be blank");//TODO cambiar texto por string
+                            else if(user.getUsername().equals(""))
+                                username.setError("username not found");
+                            else if(user.getUsername().equals(username.getText().toString()) &&
+                                    !(user.getPassword().equals(password.getText().toString())))
+                                username.setError("Username and password didn't match");
+                            else {
+                                Session.setUserSession(user);
+                                Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
+                                startActivity(intent);
+                                finish();
+                            }
                         }
                         else {
                             Toast.makeText(getApplicationContext(), "USUARIO NO VALIDO", Toast.LENGTH_LONG).show();
