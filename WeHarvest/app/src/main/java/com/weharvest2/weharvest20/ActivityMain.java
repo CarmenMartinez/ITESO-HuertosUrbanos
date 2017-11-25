@@ -16,6 +16,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.weharvest2.weharvest20.beans.Recipe;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
+import java.util.ArrayList;
+
 public class ActivityMain extends ActivityBase
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -25,6 +27,7 @@ public class ActivityMain extends ActivityBase
     protected TextView fecha;
     protected TextView categoria;
     protected FloatingActionButton create;
+    protected ArrayList<Recipe> recipes;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     @Override
@@ -46,16 +49,23 @@ public class ActivityMain extends ActivityBase
         userDBR.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                recipes = new ArrayList<>();
                 Iterable<DataSnapshot> contactChildren = dataSnapshot.getChildren();
-                for (DataSnapshot contact : contactChildren) {
-                    Recipe recipe = contact.getValue(Recipe.class);
-                    Toast.makeText(getApplicationContext(),
-                            recipe.getUser() + " " + recipe.getContenido(),
-                            Toast.LENGTH_LONG).show();
-                    usuario.setText(recipe.getUser());
-                    recipe.setContenido(recipe.getContenido());
-
+                for (DataSnapshot recipe : contactChildren) {
+                    Recipe newRecipe = recipe.getValue(Recipe.class);
+                    //AGREGAR AL ARRAYLIST
+                    recipes.add(newRecipe);
                 }
+
+                Toast.makeText(getApplicationContext(),
+                        "TOTAL RECIPES: " + recipes.size(),
+                        Toast.LENGTH_LONG).show();
+
+                usuario.setText(recipes.get(1).getUser());
+                contenido.setText(recipes.get(1).getContenido());
+                titulo.setText(recipes.get(1).getTitulo());
+                categoria.setText(recipes.get(1).getCategoria());
+
                 /*Recipe recipe = dataSnapshot.getValue(Recipe.class);
                 if (recipe != null) {
                     Toast.makeText(getApplicationContext(),

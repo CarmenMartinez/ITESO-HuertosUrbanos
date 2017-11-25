@@ -51,7 +51,7 @@
             android:layout_height="160dp"
             android:gravity="left"
             android:hint="@string/create_description_recipe"
-            android:inputType="text"/>
+            android:inputType="textMultiLine"/>
 
     </LinearLayout>
 
