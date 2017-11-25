@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.weharvest2.weharvest20.beans.Recipe;
+import com.weharvest2.weharvest20.beans.Session;
 import com.weharvest2.weharvest20.beans.User;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
@@ -49,9 +50,9 @@ public class ActivityCreateRecipe extends ActivityBase {
     }
 
     public void create(View view){
-
-        Recipe recipe = new Recipe("USUARIO", title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
-        mDatabase.child(spinner.getSelectedItem().toString()).setValue(recipe);
+        String postId = mDatabase.push().getKey();
+        Recipe recipe = new Recipe(Session.getUserSession().getUsername(), title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
+        mDatabase.child(postId).setValue(recipe);
 
         Intent intent = new Intent(this, ActivityMain.class);
         startActivity(intent);
