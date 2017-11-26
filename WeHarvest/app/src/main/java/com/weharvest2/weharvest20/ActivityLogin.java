@@ -43,7 +43,6 @@ public class ActivityLogin extends AppCompatActivity {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         User user = dataSnapshot.getValue(User.class);
                         if (user != null) {
-                            
                             if(username.getText().toString().equals(""))
                                 username.setError("This field cannot be blank");//TODO cambiar texto por string
                             else if(password.getText().toString().equals(""))
