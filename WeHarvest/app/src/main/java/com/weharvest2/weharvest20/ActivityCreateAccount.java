@@ -34,15 +34,26 @@ public class ActivityCreateAccount extends AppCompatActivity {
     public void onClick(View v){
         switch (v.getId()){
             case R.id.activity_create_account_signup:
-                //TODO Check password and confirm password
-                User user = new User(username.getText().toString(), password.getText().toString(), email.getText().toString());
-                user.setLogged(true);
-                user.savePreferences(this);
-                Session.setUserSession(user);
-                mDatabase.child(username.getText().toString()).setValue(user);
-                Intent intentCreateAccount = new Intent(this, ActivityMain.class);
-                startActivity(intentCreateAccount);
-                finish();
+                if(username.getText().toString().equals(""))
+                    username.setError("This field cannot be blank");//TODO cambiar texto por string
+                else if(email.getText().toString().equals(""))
+                    email.setError("This field cannot be blank");//TODO cambiar texto por string
+                else if(password.getText().toString().equals(""))
+                    password.setError("This field cannot be blank");//TODO cambiar texto por string
+                else if(confirmPassword.getText().toString().equals(""))
+                    confirmPassword.setError("This field cannot be blank");//TODO cambiar texto por string
+                else if (!password.getText().toString().equals(confirmPassword.getText().toString()))
+                    password.setError("Password and Confirm password didn't match");
+                else {
+                    User user = new User(username.getText().toString(), password.getText().toString(), email.getText().toString());
+                    user.setLogged(true);
+                    user.savePreferences(this);
+                    Session.setUserSession(user);
+                    mDatabase.child(username.getText().toString()).setValue(user);
+                    Intent intentCreateAccount = new Intent(this, ActivityMain.class);
+                    startActivity(intentCreateAccount);
+                    finish();
+                }
                 break;
 
         }
