@@ -62,9 +62,9 @@ public class ActivityMain extends ActivityBase
                         Toast.LENGTH_LONG).show();
 
                 usuario.setText(recipes.get(1).getUser());
-                contenido.setText(recipes.get(1).getContenido());
-                titulo.setText(recipes.get(1).getTitulo());
-                categoria.setText(recipes.get(1).getCategoria());
+                contenido.setText(recipes.get(1).getDescription());
+                titulo.setText(recipes.get(1).getRecipeTitle());
+                categoria.setText(recipes.get(1).getCategory());
 
                 /*Recipe recipe = dataSnapshot.getValue(Recipe.class);
                 if (recipe != null) {
