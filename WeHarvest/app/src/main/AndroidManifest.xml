@@ -44,7 +44,31 @@
             android:name=".ActivityFilter"
             android:label="Sowing and Harvesting"
             android:theme="@style/AppTheme.NoActionBar">
-            ç
+
+        </activity>
+
+        <activity
+            android:name=".ActivitySeeds"
+            android:label="Seeds"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ActivityCompound"
+            android:label="Compound"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ActivityGround"
+            android:label="Compound"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ActivityVerticalOrchard"
+            android:label="Compound"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".ActivityInitSlides"

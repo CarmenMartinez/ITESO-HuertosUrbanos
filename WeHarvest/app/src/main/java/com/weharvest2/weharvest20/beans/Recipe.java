@@ -6,21 +6,21 @@ package com.weharvest2.weharvest20.beans;
 
 public class Recipe {
     private String username;
-    private String titulo;
-    private String contenido;
-    private String fecha;
-    private String categoria;
+    private String title;
+    private String description;
+    private String date;
+    private String category;
 
     public Recipe() {
 
     }
 
-    public Recipe(String username, String titulo, String contenido, String fecha, String categoria) {
+    public Recipe(String username, String title, String description, String date, String category) {
         this.username = username;
-        this.titulo = titulo;
-        this.contenido = contenido;
-        this.fecha = fecha;
-        this.categoria = categoria;
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.category = category;
     }
 
 
@@ -32,35 +32,35 @@ public class Recipe {
         this.username = username;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getRecipeTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String titulo) {
+        this.title = title;
     }
 
-    public String getContenido() {
-        return contenido;
+    public String getDescription() {
+        return description;
     }
 
-    public void setContenido(String contenido) {
-        this.contenido = contenido;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getDate() {
+        return date;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public String getCategoria() {
-        return categoria;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

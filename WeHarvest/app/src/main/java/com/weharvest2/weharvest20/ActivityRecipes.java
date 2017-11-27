@@ -33,27 +33,36 @@ public class ActivityRecipes extends ActivityBase {
         seeds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), ActivitySeeds.class);
+                startActivity(intent);
+                finish();
             }
         });
 
         ground.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), ActivityGround.class);
+                startActivity(intent);
+                finish();
             }
         });
 
         compound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(), ActivityCompound.class);
+                startActivity(intent);
+                finish();
             }
         });
 
         verticalOrchard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ActivityVerticalOrchard.class);
+                startActivity(intent);
+                finish();
 
             }
         });
