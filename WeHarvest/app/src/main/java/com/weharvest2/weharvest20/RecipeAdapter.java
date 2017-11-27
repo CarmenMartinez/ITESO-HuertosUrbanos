@@ -26,9 +26,13 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.MyViewHold
     private ArrayList<Recipe> recipeList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, description;
+        public TextView title, description, username, date, category;
+
         public MyViewHolder(View view){
             super(view);
+            username = (TextView) view.findViewById(R.id.username);
+            date = (TextView) view.findViewById(R.id.date);
+            category = (TextView) view.findViewById(R.id.category);
             title = (TextView)view.findViewById(R.id.title);
             description = (TextView)view.findViewById(R.id.description);
         }
@@ -52,7 +56,9 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.MyViewHold
         Recipe recipe = recipeList.get(position);
         holder.title.setText(recipe.getRecipeTitle());
         holder.description.setText(recipe.getDescription());
-
+        holder.username.setText("@"+recipe.getUser());
+        holder.date.setText(recipe.getDate());
+        holder.category.setText(recipe.getCategory());
     }
 
     @Override
