@@ -39,7 +39,35 @@ public class ControlPlant {
         return plant;
     }
 
-    public Month getMonthByPlantId(int idPlant, DataBaseHandler dh) {
+    public ArrayList<Plant> getAllPlantsByMonth(String month_name, DataBaseHandler dh) {
+        ArrayList<Plant> plants = new ArrayList<Plant>();
+        String selectQuery = "SELECT  * FROM " + DataBaseHandler.TABLE_PLANT + " td, "
+                + DataBaseHandler.TABLE_MONTH + " tg, " + DataBaseHandler.TABLE_SOW_MONTH_PLANT + " tt WHERE tg."
+                + DataBaseHandler.KEY_MONTH_NAME + " = '" + month_name + "'" + " AND tg." + DataBaseHandler.KEY_PLANT_ID
+                + " = " + "tt." + DataBaseHandler.KEY_MONTH_ID + " AND td." + DataBaseHandler.KEY_MONTH_ID + " = "
+                + "tt." + DataBaseHandler.KEY_PLANT_ID;
+
+        //Log.e(LOG, selectQuery);
+
+        SQLiteDatabase db = dh.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (c.moveToFirst()) {
+            do {
+                Plant td = new Plant();
+                td.setIdPlant(c.getInt(0));
+                td.setPlantName(c.getString(1));
+                td.setPeriod(c.getString(2));
+                // adding to todo list
+                plants.add(td);
+            } while (c.moveToNext());
+        }
+
+        return plants;
+    }
+
+    /*public Month getMonthByPlantId(int idPlant, DataBaseHandler dh) {
         Month month = new Month();
         String selectQuery = "SELECT  S." + DataBaseHandler.KEY_PLANT_ID + ","
                 + "S." + DataBaseHandler.KEY_PLANT_NAME
@@ -64,7 +92,7 @@ public class ControlPlant {
         cursor = null;
         // return store
         return month;
-    }
+    }*/
 
     public ArrayList<Month> getMonths(DataBaseHandler dh) {
         ArrayList<Month> months = new ArrayList<>();

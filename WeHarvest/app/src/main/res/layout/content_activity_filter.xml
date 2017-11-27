@@ -20,40 +20,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/simpleText"
-            android:text="Classification" />
+            android:text="Plant" />
 
         <Spinner
-            android:id="@+id/activity_filter_classification"
+            android:id="@+id/activity_filter_plant"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
             style="@style/textTitle"
-            android:entries="@array/classification_array"/>
+            android:entries="@array/plant_array" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/simpleText"
-            android:text="Agricultural cycle" />
+            android:text="Month" />
 
         <Spinner
-            android:id="@+id/activity_filter_cycle"
+            android:id="@+id/activity_filter_month"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
             style="@style/textTitle"
-            android:entries="@array/cycle_array"/>
+            android:entries="@array/month_array"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/simpleText"
-            android:text="Season" />
+            android:text="Mode" />
 
         <Spinner
-            android:id="@+id/activity_filter_season"
+            android:id="@+id/activity_filter_mode"
             android:layout_width="@dimen/activity_login_edit_text_dimen"
             android:layout_height="wrap_content"
             style="@style/textTitle"
-            android:entries="@array/season_array"/>
+            android:entries="@array/mode_array"/>
 
         <TextView
             android:layout_width="wrap_content"

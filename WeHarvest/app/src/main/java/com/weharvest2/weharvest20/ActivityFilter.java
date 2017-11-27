@@ -12,9 +12,9 @@ import com.weharvest2.weharvest20.gui.ActivityBase;
 
 public class ActivityFilter extends ActivityBase {
 
-    protected Spinner classification;
-    protected Spinner cycle;
-    protected Spinner season;
+    protected Spinner plant;
+    protected Spinner month;
+    protected Spinner mode;
     protected Spinner state;
     protected Button button;
 
@@ -25,33 +25,33 @@ public class ActivityFilter extends ActivityBase {
 
         onCreateDrawer();
 
-        classification = (Spinner) findViewById(R.id.activity_filter_classification);
-        cycle = (Spinner) findViewById(R.id.activity_filter_cycle);
-        season = (Spinner) findViewById(R.id.activity_filter_season);
+        plant = (Spinner) findViewById(R.id.activity_filter_plant);
+        month = (Spinner) findViewById(R.id.activity_filter_month);
+        mode = (Spinner) findViewById(R.id.activity_filter_mode);
         state = (Spinner) findViewById(R.id.activity_filter_state);
 
         button = (Button) findViewById(R.id.activity_filter_button);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.classification_array, android.R.layout.simple_spinner_item);
+                R.array.plant_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        classification.setAdapter(adapter);
+        plant.setAdapter(adapter);
 
         adapter = ArrayAdapter.createFromResource(this,
-                R.array.cycle_array, android.R.layout.simple_spinner_item);
+                R.array.month_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        cycle.setAdapter(adapter);
+        month.setAdapter(adapter);
 
         adapter = ArrayAdapter.createFromResource(this,
-                R.array.season_array, android.R.layout.simple_spinner_item);
+                R.array.mode_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        season.setAdapter(adapter);
+        mode.setAdapter(adapter);
 
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.state_array, android.R.layout.simple_spinner_item);
@@ -59,10 +59,18 @@ public class ActivityFilter extends ActivityBase {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         state.setAdapter(adapter);
+
+
+
     }
 
     public void filter(View v) {
         // FILTRAR LOS DATOS DE BASE DE DATOS
+
+        String plantSelect =  plant.getSelectedItem().toString();
+        String monthSelect =  month.getSelectedItem().toString();
+        String modeSelect =  mode.getSelectedItem().toString();
+        String stateSelect =  state.getSelectedItem().toString();
 
         Intent intent = new Intent(this, ActivitySowingHarvesting.class);
         startActivity(intent);
