@@ -82,10 +82,10 @@
     <string name="yunkText">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</string>
 
     <string-array name="classification_array">
-        <item>Semillas</item>
-        <item>Tierra</item>
-        <item>Composta</item>
-        <item>Huerto Vertical</item>
+        <item>Seeds</item>
+        <item>Ground</item>
+        <item>Compound</item>
+        <item>Vertical Orchard</item>
     </string-array>
     <string name="prueba">Prueba</string>
     <string name="query_agricultural_cycle">Ciclo Agrícola</string>
@@ -94,16 +94,31 @@
     <string name="query_mode">Modalidad</string>
     <string name="query_crop">Cultivo</string>
 
+    <string name="month1">January</string>
+    <string name="month2">February</string>
+    <string name="month3">March</string>
+    <string name="month4">April</string>
+    <string name="month5">May</string>
+    <string name="month6">June</string>
+    <string name="month7">July</string>
+    <string name="month8">August</string>
+    <string name="month9">September</string>
+    <string name="month10">October</string>
+    <string name="month11">November</string>
+    <string name="month12">December</string>
+
     <string-array name="cycle_array">
         <item>Otoño - Invierno</item>
         <item>Primavera - Verano</item>
     </string-array>
 
     <string-array name="season_array">
-        <item>Siembra</item>
-        <item>Cosecha</item>
-        <item>Siembra + Cosecha</item>
+        <item>Sow</item>
+        <item>Harvest</item>
+        <item>Sow + Harvest</item>
     </string-array>
+
+
 
     <string-array name="state_array">
         <item>Resumen Nacional</item>
