@@ -119,26 +119,6 @@
     </string-array>
 
 
-    <string-array name="month_array">
-        <item>Default</item>
-        <item>Enero</item>
-        <item>Febrero</item>
-        <item>Marzo</item>
-        <item>Abril</item>
-        <item>Mayo</item>
-        <item>Junio</item>
-        <item>Julio</item>
-        <item>Agosto</item>
-        <item>Septiembre</item>
-        <item>Octubre</item>
-        <item>Noviembre</item>
-        <item>Diciembre</item>
-    </string-array>
-
-    <string-array name="mode_array">
-    <item>Sow</item>
-    <item>Harvest</item>
-    </string-array>
 
     <string-array name="state_array">
         <item>Resumen Nacional</item>
@@ -173,34 +153,6 @@
         <item>Veracruz</item>
         <item>Yucatán</item>
         <item>Zacatecas</item>
-    </string-array>
-
-    <string-array name="plant_array">
-        <item>Default</item>
-        <item>Acelga</item>
-        <item>Ajo</item>
-        <item>Alcachofa</item>
-        <item>Apio</item>
-        <item>Berenjena</item>
-        <item>Borraja</item>
-        <item>Brócoli</item>
-        <item>Calabacin</item>
-        <item>Calabaza</item>
-        <item>Canónigos</item>
-        <item>Cardillo</item>
-        <item>Cardo</item>
-        <item>Cebolla</item>
-        <item>Cohollo</item>
-        <item>Col</item>
-        <item>Coliflor</item>
-        <item>Escarola</item>
-        <item>Espárrago</item>
-        <item>Espinaca</item>
-        <item>Fresas</item>
-        <item>Guisante</item>
-        <item>Haba</item>
-        <item>Judías</item>
-        <item>Lechuga</item>
     </string-array>
 
 
