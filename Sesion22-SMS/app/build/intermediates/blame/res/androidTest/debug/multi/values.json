@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "/home/fernando/.android/build-cache/bbb9c92e8f6b437369759253d7830bff49486f28/output/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 45,
+                        "endOffset": 270
+                    }
+                }
+            }
+        ]
+    }
+]

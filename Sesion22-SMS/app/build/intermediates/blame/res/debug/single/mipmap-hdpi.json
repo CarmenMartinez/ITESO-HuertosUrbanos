@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    }
+]
