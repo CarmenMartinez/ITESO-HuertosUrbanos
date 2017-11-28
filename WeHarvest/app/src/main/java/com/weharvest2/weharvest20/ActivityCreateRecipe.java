@@ -49,14 +49,23 @@ public class ActivityCreateRecipe extends ActivityBase {
         spinner.setAdapter(adapter);
     }
 
-    public void create(View view){
-        String postId = mDatabase.push().getKey();
-        Recipe recipe = new Recipe(Session.getUserSession().getUsername(), title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
-        mDatabase.child(postId).setValue(recipe);
-        //TODO check the activity.
-        //Options: ActivityRecipes or ActivityMain
-        Intent intent = new Intent(this, ActivityMain.class);
-        startActivity(intent);
+    public void createNewRecipe(View v){
+
+        if (title.getText().toString().equals(""))
+            title.setError("This field cannot be blank");//TODO cambiar texto por string
+        else if (content.getText().toString().equals(""))
+            content.setError("Please make a body to the publication");//TODO cambiar texto por string
+        else {
+            String postId = mDatabase.push().getKey();
+            Recipe recipe = new Recipe(Session.getUserSession().getUsername(), title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
+            mDatabase.child(postId).setValue(recipe);
+            //TODO check the activity.
+            //Options: ActivityRecipes or ActivityMain
+            Intent intent = new Intent(this, ActivityMain.class);
+            startActivity(intent);
+            finish();
+
+        }
 
     }
 

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,17 +19,15 @@ import com.weharvest2.weharvest20.beans.Recipe;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ActivityMain extends ActivityBase
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    protected TextView usuario;
-    protected TextView contenido;
-    protected TextView titulo;
-    protected TextView fecha;
-    protected TextView categoria;
     protected FloatingActionButton create;
     protected ArrayList<Recipe> recipes;
+    private RecyclerView recyclerView;
+    private RecipeAdapter adapter;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     @Override
@@ -37,12 +37,8 @@ public class ActivityMain extends ActivityBase
 
         onCreateDrawer();
 
-        usuario = (TextView) findViewById(R.id.activity_main_usuario);
-        titulo = (TextView) findViewById(R.id.activity_main_titulo);
-        contenido = (TextView) findViewById(R.id.activity_main_contenido);
-        fecha = (TextView) findViewById(R.id.activity_main_fecha);
-        categoria = (TextView) findViewById(R.id.activity_main_categoria);
         create = (FloatingActionButton) findViewById(R.id.activity_main_create);
+        recyclerView = (RecyclerView) findViewById (R.id.recycler_view_activity_main);
 
 
         DatabaseReference userDBR = mDatabase.child("recipes");
@@ -57,29 +53,15 @@ public class ActivityMain extends ActivityBase
                     recipes.add(newRecipe);
                 }
 
-                Toast.makeText(getApplicationContext(),
-                        "TOTAL RECIPES: " + recipes.size(),
-                        Toast.LENGTH_LONG).show();
+                Collections.reverse(recipes);
 
-                usuario.setText(recipes.get(1).getUser());
-                contenido.setText(recipes.get(1).getDescription());
-                titulo.setText(recipes.get(1).getRecipeTitle());
-                categoria.setText(recipes.get(1).getCategory());
+                adapter = new RecipeAdapter(getApplicationContext(), recipes);
 
-                /*Recipe recipe = dataSnapshot.getValue(Recipe.class);
-                if (recipe != null) {
-                    Toast.makeText(getApplicationContext(),
-                            user.getUsername() + " " + user.getPassword(),
-                            Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
-                    startActivity(intent);
-                    finish();
+                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+                recyclerView.setLayoutManager(mLayoutManager);
 
-                }
-                else {
-                    Toast.makeText(getApplicationContext(), "USUARIO NO VALIDO", Toast.LENGTH_LONG).show();
-                }*/
-
+                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
             }
 
             @Override

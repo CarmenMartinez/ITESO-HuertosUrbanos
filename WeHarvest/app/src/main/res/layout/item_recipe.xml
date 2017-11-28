@@ -14,8 +14,10 @@
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="4dp">
-        <RelativeLayout
+        app:cardCornerRadius="8dp"
+        card_view:cardBackgroundColor="@color/background_cards">
+
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout

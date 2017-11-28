@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:text="@string/create_submit"
         style="@style/button"
-        android:onClick="create"/>
+        android:onClick="createNewRecipe"/>
 
 </LinearLayout>
 

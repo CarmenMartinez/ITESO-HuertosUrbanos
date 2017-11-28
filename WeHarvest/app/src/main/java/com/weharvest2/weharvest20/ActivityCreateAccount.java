@@ -55,7 +55,6 @@ public class ActivityCreateAccount extends AppCompatActivity {
                     finish();
                 }
                 break;
-
         }
     }
 }

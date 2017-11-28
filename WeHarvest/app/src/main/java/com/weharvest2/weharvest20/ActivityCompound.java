@@ -4,11 +4,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.weharvest2.weharvest20.beans.Recipe;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by luisacfl on 26/11/17.
@@ -16,55 +23,53 @@ import java.util.ArrayList;
 
 public class ActivityCompound extends ActivityBase{
 
-        private RecyclerView recyclerView;
-        private RecipeAdapter adapter;
-        private ArrayList<Recipe> recipeList;
+    private RecyclerView recyclerView;
+    private RecipeAdapter adapter;
+    private ArrayList<Recipe> recipes;
+    DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
-    /*public ActivitySeeds(Recipes r){
-        recipes=r;
-    }*/
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_compound);
+
+        onCreateDrawer();
+
+        recyclerView = (RecyclerView) findViewById (R.id.recycler_view_activity_compound);
+
+        DatabaseReference userDBR = mDatabase.child("recipes");
+        userDBR.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                recipes = new ArrayList<>();
+                Iterable<DataSnapshot> contactChildren = dataSnapshot.getChildren();
+                for (DataSnapshot recipe : contactChildren) {
+                    Recipe newRecipe = recipe.getValue(Recipe.class);
+                    //AGREGAR AL ARRAYLIST
+                    if (newRecipe.getCategory().toString().equals("Compound"))
+                        recipes.add(newRecipe);
+                }
 
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_compound);
+                Collections.reverse(recipes);
 
-            onCreateDrawer();
+                adapter = new RecipeAdapter(getApplicationContext(), recipes);
 
-            recyclerView = (RecyclerView) findViewById (R.id.recycler_view);
+                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+                recyclerView.setLayoutManager(mLayoutManager);
 
-            recipeList = new ArrayList<>();
-
+                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
 
 
-            adapter = new RecipeAdapter(this, recipeList);
+            }
 
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
-            recyclerView.setLayoutManager(mLayoutManager);
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(), "Canceled", Toast.LENGTH_LONG).show();
+            }
+        });
 
-            recyclerView.setAdapter(adapter);
 
-            //recipeList=recipes.getRecipes();
-            prepareRecipes();
-
-        }
-
-        public void prepareRecipes() {
-            String user = "luisa";
-            String c = "Compound";
-
-            Recipe r = new Recipe(user, "Compound", "Solo plantalas", "12/12/17", c);
-            recipeList.add(r);
-            Recipe r2 = new Recipe(user, "holsdfasdfaaaaa", "Solo AMA LA FREAKING LECTURA", "12/12/17", c);
-            recipeList.add(r2);
-            Recipe r3 = new Recipe(user, "hsoiajSDIJADF", "DIVERSION", "12/12/17", c);
-            recipeList.add(r3);
-            adapter.notifyDataSetChanged();
-            /*
-            Aquí recibiría la lista en donde estan guardadas las recetas
-            y agregaria al arraylist local las que sean iguales a la categoria
-            luego ya las imprimiría
-            */
-        }
+    }
 }
