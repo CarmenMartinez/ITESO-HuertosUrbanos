@@ -18,8 +18,7 @@
             android:label="Recipes"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ActivityLogin" />
-        <activity android:name=".ActivitySplashScreen">
-        </activity>
+        <activity android:name=".ActivitySplashScreen"></activity>
         <activity android:name=".ActivityCreateAccount" />
         <activity
             android:name=".ActivityCreateRecipe"
@@ -37,12 +36,10 @@
             android:name=".ActivityEvents"
             android:label="Events"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".ActivitySowingHarvesting"
             android:label="Sowing and Harvesting"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name=".ActivityFilter"
             android:label="Sowing and Harvesting"
@@ -73,8 +70,8 @@
             android:label="Vertical Orchard"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
-        <activity android:name=".ActivityInitSlides"
+        <activity
+            android:name=".ActivityInitSlides"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -82,7 +79,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".ActivityCreateEvent"></activity>
     </application>
 
 </manifest>
