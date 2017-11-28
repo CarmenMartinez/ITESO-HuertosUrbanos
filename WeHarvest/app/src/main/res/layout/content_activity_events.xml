@@ -19,53 +19,42 @@
             android:gravity="center"
             android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/activity_events_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="User"/>
-
-        <TextView
-            android:id="@+id/activity_events_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="title"/>
-
-        <TextView
-            android:id="@+id/activity_events_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="description"/>
-
-        <TextView
-            android:id="@+id/activity_events_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="date"/>
-
-        <TextView
-            android:id="@+id/activity_events_place"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="place"/>
-
-
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
             android:src="@drawable/eventos" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/eventos" />
+            <TextView
+                android:id="@+id/activity_events_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User"/>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/eventos" />
+            <TextView
+                android:id="@+id/activity_events_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="title"/>
+
+            <TextView
+                android:id="@+id/activity_events_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="description"/>
+
+
+            <TextView
+                android:id="@+id/activity_events_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="place"/>
+
+            <TextView
+                android:id="@+id/activity_events_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="date"/>
 
         </LinearLayout>
     </ScrollView>

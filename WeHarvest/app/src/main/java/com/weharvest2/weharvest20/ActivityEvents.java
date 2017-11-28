@@ -40,8 +40,9 @@ public class ActivityEvents extends ActivityBase {
         user  = (TextView) findViewById(R.id.activity_events_user);
         title = (TextView) findViewById(R.id.activity_events_title);
         description = (TextView) findViewById(R.id.activity_events_description);
-        date = (TextView) findViewById(R.id.activity_events_description);
+        date = (TextView) findViewById(R.id.activity_events_date);
         place = (TextView) findViewById(R.id.activity_events_place);
+        createEvent = (FloatingActionButton) findViewById(R.id.activity_events_create);
 
         DatabaseReference userDBR = mDatabase.child("events");
         userDBR.addValueEventListener(new ValueEventListener(){
@@ -52,13 +53,15 @@ public class ActivityEvents extends ActivityBase {
                 for (DataSnapshot event : contactChildren) {
                     Event newEvent = event.getValue(Event.class);
                     events.add(newEvent);
+                    user.setText(newEvent.getUsername());
+                    description.setText(newEvent.getDescription());
+                    title.setText(newEvent.getTitle());
+                    date.setText(newEvent.getDate());
+                    place.setText(newEvent.getPlace());
                 }
-
-                user.setText(events.get(1).getUsername());
-                description.setText(events.get(1).getDescription());
-                title.setText(events.get(1).getTitle());
-                date.setText(events.get(1).getDate());
-                place.setText(events.get(1).getPlace());
+                if(events.isEmpty()){
+                    user.setText("No hay eventos");
+                }
 
             }
             @Override

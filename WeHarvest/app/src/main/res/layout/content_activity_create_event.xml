@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.weharvest2.weharvest20.ActivityEvents"
+    tools:showIn="@layout/app_bar_activity_create_event">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="@style/textTitle"
+            android:layout_marginTop="10dp"
+            android:text="Create new event" />
+
+        <EditText
+            android:id="@+id/activity_create_event_title"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:hint="Event Title"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/activity_create_event_description"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:hint="Description"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/activity_create_event_date"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:hint="Event Date"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/activity_create_event_place"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            android:hint="Event Place"
+            android:inputType="text"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_create_event"
+        android:layout_width="@dimen/buttons_width"
+        android:layout_height="wrap_content"
+        android:text="@string/create_submit"
+        style="@style/button"
+        android:onClick="createNewEvent"/>
+
+</LinearLayout>

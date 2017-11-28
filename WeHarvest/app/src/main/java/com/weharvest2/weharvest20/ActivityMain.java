@@ -66,20 +66,6 @@ public class ActivityMain extends ActivityBase
                 titulo.setText(recipes.get(1).getRecipeTitle());
                 categoria.setText(recipes.get(1).getCategory());
 
-                /*Recipe recipe = dataSnapshot.getValue(Recipe.class);
-                if (recipe != null) {
-                    Toast.makeText(getApplicationContext(),
-                            user.getUsername() + " " + user.getPassword(),
-                            Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(getApplicationContext(), ActivityMain.class);
-                    startActivity(intent);
-                    finish();
-
-                }
-                else {
-                    Toast.makeText(getApplicationContext(), "USUARIO NO VALIDO", Toast.LENGTH_LONG).show();
-                }*/
-
             }
 
             @Override
