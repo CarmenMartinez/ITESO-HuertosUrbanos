@@ -50,7 +50,7 @@ public class ActivityCreateRecipe extends ActivityBase {
     }
 
     public void createNewRecipe(View v){
-
+        
         if (title.getText().toString().equals(""))
             title.setError("This field cannot be blank");//TODO cambiar texto por string
         else if (content.getText().toString().equals(""))
@@ -61,12 +61,37 @@ public class ActivityCreateRecipe extends ActivityBase {
             mDatabase.child(postId).setValue(recipe);
             //TODO check the activity.
             //Options: ActivityRecipes or ActivityMain
-            Intent intent = new Intent(this, ActivityMain.class);
-            startActivity(intent);
-            finish();
-
+            switch(recipe.getCategory()){
+                case "Seed":
+                    Intent intentS = new Intent(this, ActivitySeeds.class);
+                    startActivity(intentS);
+                    finish();
+                    break;
+                case "Ground":
+                    Intent intentG = new Intent(this, ActivityGround.class);
+                    startActivity(intentG);
+                    finish();
+                    break;
+                case "Compound":
+                    Intent intentC = new Intent(this, ActivityCompound.class);
+                    startActivity(intentC);
+                    finish();
+                    break;
+                case "Vertical Orchard":
+                    Intent intentV = new Intent(this, ActivityVerticalOrchard.class);
+                    startActivity(intentV);
+                    finish();
+                    break;
+                default:
+                    Intent intent = new Intent(this, ActivityRecipes.class);
+                    startActivity(intent);
+                    finish();
+                    
+                    
+            }
+            
         }
-
+        
     }
 
 }
