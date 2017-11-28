@@ -8,7 +8,13 @@
     <color name="greenTheme">#89d682</color>
     <color name="greenThemeDark">#76ae6f</color>
     <color name="light_gray">#BDBDBD</color>
-    <color name="background_cards">#93c6fd</color>
+    <color name="background_cards_explore">#669933</color>
+    <color name="background_cards_seeds">#93c6fd</color>
+    <color name="background_cards_compound">#93c6fd</color>
+    <color name="background_cards_ground">#93c6fd</color>
+    <color name="background_cards_vertical_orchard">#93c6fd</color>
+    <color name="greenThemeForButtons">#81cf7a</color>
+    <color name="OrangeThemeForCards">#f5a865</color>
 
     <!-- Screens background color-->
     <color name="bg_screen1">#7BEB9F</color>
