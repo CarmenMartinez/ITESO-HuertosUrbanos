@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.weharvest2.weharvest20.beans.Event;
 import com.weharvest2.weharvest20.beans.Recipe;
 
 import java.util.ArrayList;
@@ -46,6 +47,49 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         return new MyViewHolder(itemView);
     }
 
+    public String getMonthName(String numMonth){
+        switch(numMonth){
+            case "01":
+                return "JAN";
+
+            case "02":
+                return "FEB";
+
+            case "03":
+                return "MAR";
+
+            case "04":
+                return "APR";
+
+            case "05":
+                return "MAY";
+
+            case "06":
+                return "JUN";
+
+            case "07":
+                return "JUL";
+
+            case "08":
+                return "AUG";
+
+            case "09":
+                return "SEP";
+
+            case "10":
+                return "OCT";
+
+            case "11":
+                return "NOV";
+
+            case "12":
+                return "DEC";
+
+            default:
+                return "NO MONTH";
+        }
+    }
+
     @Override
     public void onBindViewHolder(EventAdapter.MyViewHolder holder, int position) {
         Event event = eventList.get(position);
@@ -54,9 +98,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         holder.date.setText(event.getDate());
 
         //CHECAR COMO SE VA A OBTENER MES Y DIA
-        //holder.month.setText(event.getMonth());
-        //holder.day.setText(event.getDay());
-
+        holder.month.setText(getMonthName(event.getDate().substring(3,4)));
+        holder.day.setText(event.getDate().substring(6,7));
 
     }
 

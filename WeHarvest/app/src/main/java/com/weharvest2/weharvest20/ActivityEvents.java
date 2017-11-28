@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,11 +16,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.weharvest2.weharvest20.beans.Event;
+
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
 import java.util.ArrayList;
 
 public class ActivityEvents extends ActivityBase {
+
+    private RecyclerView recyclerView;
+    private EventAdapter adapter;
 
     protected TextView user;
     protected TextView title;
@@ -42,6 +47,8 @@ public class ActivityEvents extends ActivityBase {
         date = (TextView) findViewById(R.id.activity_events_date);
         place = (TextView) findViewById(R.id.activity_events_place);
         createEvent = (FloatingActionButton) findViewById(R.id.activity_events_create);
+
+        recyclerView = (RecyclerView) findViewById (R.id.recycler_view_activity_seeds);
 
         DatabaseReference userDBR = mDatabase.child("events");
         userDBR.addValueEventListener(new ValueEventListener(){
