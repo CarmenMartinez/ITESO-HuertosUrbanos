@@ -1,9 +1,6 @@
 package com.weharvest2.weharvest20;
 
 import android.content.Intent;
-import android.icu.text.SimpleDateFormat;
-import android.icu.util.Calendar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -15,13 +12,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.weharvest2.weharvest20.beans.Recipe;
 import com.weharvest2.weharvest20.beans.Session;
-import com.weharvest2.weharvest20.beans.User;
 import com.weharvest2.weharvest20.gui.ActivityBase;
-
-import java.sql.Date;
-import java.sql.Time;
-
-import static android.R.attr.password;
 
 public class ActivityCreateRecipe extends ActivityBase {
 

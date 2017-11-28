@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/home/fernando/Documents/Moviles/Proyecto/ITESO-HuertosUrbanos/Sesion22-SMS/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/home/fernando/.android/build-cache/65b034c289c4b12b1260e1939e574766235fb0bf/output/res/color/switch_thumb_material_dark.xml"
+    }
+]
