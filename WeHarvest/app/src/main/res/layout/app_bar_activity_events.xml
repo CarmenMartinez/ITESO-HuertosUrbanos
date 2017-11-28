@@ -22,4 +22,14 @@
 
     <include layout="@layout/content_activity_events" />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_events_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/greenThemeForButtons"
+        android:layout_margin="20dp"
+        android:src="@mipmap/add"
+        android:layout_gravity="bottom|end"
+        android:onClick="createEvent" />
+
 </android.support.design.widget.CoordinatorLayout>

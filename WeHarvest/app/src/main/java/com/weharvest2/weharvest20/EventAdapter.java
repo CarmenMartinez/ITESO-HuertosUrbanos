@@ -98,8 +98,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         holder.date.setText(event.getDate());
 
         //CHECAR COMO SE VA A OBTENER MES Y DIA
-        holder.month.setText(getMonthName(event.getDate().substring(3,4)));
-        holder.day.setText(event.getDate().substring(6,7));
+        holder.month.setText(getMonthName(event.getDate().substring(6,7)));
+        holder.day.setText(event.getDate().substring(9,10));
 
     }
 

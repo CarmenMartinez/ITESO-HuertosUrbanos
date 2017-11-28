@@ -8,8 +8,7 @@
     android:layout_centerInParent="true"
     android:layout_gravity="top|center"
     card_view:cardUseCompatPadding="true"
-    card_view:cardCornerRadius="8dp"
-    android:layout_marginBottom="16dp">
+    card_view:cardCornerRadius="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"

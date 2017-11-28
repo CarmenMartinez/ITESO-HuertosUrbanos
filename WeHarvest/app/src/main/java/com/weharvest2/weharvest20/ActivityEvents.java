@@ -1,5 +1,6 @@
 package com.weharvest2.weharvest20;
 
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -29,17 +30,12 @@ import com.weharvest2.weharvest20.beans.Event;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ActivityEvents extends ActivityBase {
 
     private RecyclerView recyclerView;
     private EventAdapter adapter;
-
-    protected TextView user;
-    protected TextView title;
-    protected TextView description;
-    protected TextView date;
-    protected TextView place;
     protected FloatingActionButton createEvent;
     protected ArrayList<Event> events;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -50,14 +46,10 @@ public class ActivityEvents extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
 
-        user  = (TextView) findViewById(R.id.activity_events_user);
-        title = (TextView) findViewById(R.id.activity_events_title);
-        description = (TextView) findViewById(R.id.activity_events_description);
-        date = (TextView) findViewById(R.id.activity_events_date);
-        place = (TextView) findViewById(R.id.activity_events_place);
-        createEvent = (FloatingActionButton) findViewById(R.id.activity_events_create);
+        onCreateDrawer();
 
-        recyclerView = (RecyclerView) findViewById (R.id.recycler_view_activity_seeds);
+        createEvent = (FloatingActionButton) findViewById(R.id.activity_events_create);
+        recyclerView = (RecyclerView) findViewById (R.id.recycler_view_activity_events);
 
         DatabaseReference userDBR = mDatabase.child("events");
         userDBR.addValueEventListener(new ValueEventListener(){
@@ -68,15 +60,19 @@ public class ActivityEvents extends ActivityBase {
                 for (DataSnapshot event : contactChildren) {
                     Event newEvent = event.getValue(Event.class);
                     events.add(newEvent);
-                    user.setText(newEvent.getUsername());
-                    description.setText(newEvent.getDescription());
-                    title.setText(newEvent.getTitle());
-                    date.setText(newEvent.getDate());
-                    place.setText(newEvent.getPlace());
+
                 }
-                if(events.isEmpty()){
-                    user.setText("No hay eventos");
-                }
+                Collections.reverse(events);
+
+
+                adapter = new EventAdapter(getApplicationContext(), events);
+
+                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+                recyclerView.setLayoutManager(mLayoutManager);
+
+                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+
 
             }
             @Override
@@ -84,7 +80,6 @@ public class ActivityEvents extends ActivityBase {
                 Toast.makeText(getApplicationContext(), "Canceled", Toast.LENGTH_LONG).show();
             }
         });
-        onCreateDrawer();
     }
 
     public void createEvent(View view) {
