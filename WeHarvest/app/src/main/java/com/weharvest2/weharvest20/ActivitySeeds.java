@@ -5,6 +5,8 @@ import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +29,7 @@ public class ActivitySeeds extends ActivityBase {
     private RecyclerView recyclerView;
     private RecipeAdapter adapter;
     private ArrayList<Recipe> recipes;
+    protected TextView empty;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     @Override
@@ -36,6 +39,7 @@ public class ActivitySeeds extends ActivityBase {
 
         onCreateDrawer();
 
+        empty = (TextView) findViewById(R.id.activity_seeds_textview);
         recyclerView = (RecyclerView) findViewById (R.id.recycler_view_activity_seeds);
 
         DatabaseReference userDBR = mDatabase.child("recipes");
@@ -52,8 +56,9 @@ public class ActivitySeeds extends ActivityBase {
                 }
 
 
-                    Collections.reverse(recipes);
+                Collections.reverse(recipes);
 
+                if (!recipes.isEmpty()) {
                     adapter = new RecipeAdapter(getApplicationContext(), recipes);
 
                     RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -61,7 +66,10 @@ public class ActivitySeeds extends ActivityBase {
 
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
-
+                    empty.setText("");
+                    empty.setVisibility(View.GONE);
+                } else
+                    empty.setText("Create seeds recipes to see them here!");
 
             }
 
