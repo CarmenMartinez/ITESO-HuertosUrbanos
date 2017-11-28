@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="8dp"
-        card_view:cardBackgroundColor="@color/background_cards">
+        card_view:cardBackgroundColor="@color/OrangeThemeForCards">
 
     <RelativeLayout
             android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                     android:paddingRight="@dimen/title_padding"
                     android:paddingTop="@dimen/title_padding"
                     android:textSize="@dimen/recipe_username"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@android:color/white"
                     android:textStyle="bold"
                     />
             </LinearLayout>
@@ -45,8 +45,8 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/title_padding"
                 android:paddingRight="@dimen/title_padding"
-                android:textColor="#000"
-                android:textSize="@dimen/recipe_title" />
+                android:textSize="@dimen/recipe_title"
+                android:textColor="@android:color/white"/>
 
             <TextView
                 android:id="@+id/description"
@@ -56,7 +56,8 @@
                 android:paddingBottom="@dimen/recipe_description_padding_bottom"
                 android:paddingLeft="@dimen/title_padding"
                 android:paddingRight="@dimen/title_padding"
-                android:textSize="@dimen/recipe_description" />
+                android:textSize="@dimen/recipe_description"
+                android:textColor="@android:color/white"/>
 
             <TextView
                 android:id="@+id/category"
@@ -79,7 +80,7 @@
                 android:paddingLeft="@dimen/title_padding"
                 android:paddingRight="@dimen/title_padding"
                 android:textSize="@dimen/recipe_date"
-                android:textColor="@color/light_gray"/>
+                android:textColor="@android:color/white"/>
 
         </RelativeLayout>
 

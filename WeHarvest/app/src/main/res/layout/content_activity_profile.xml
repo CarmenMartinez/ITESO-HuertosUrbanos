@@ -24,9 +24,10 @@
         app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
+        android:id="@+id/activity_profile_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fernando Villanueva"
+        android:text="User"
         style="@style/textview"/>
 
     <ImageView
