@@ -60,6 +60,7 @@
             android:name=".ActivityVerticalOrchard"
             android:label="Vertical Orchard"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity
             android:name=".ActivityInitSlides"
             android:theme="@style/AppTheme.NoActionBar">
@@ -72,6 +73,7 @@
         <activity android:name=".ActivityCreateEvent"
             android:label="Create Event"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

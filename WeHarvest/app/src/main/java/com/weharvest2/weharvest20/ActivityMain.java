@@ -56,12 +56,12 @@ public class ActivityMain extends ActivityBase
                 Collections.reverse(recipes);
 
                 adapter = new RecipeAdapter(getApplicationContext(), recipes);
-
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
                 recyclerView.setLayoutManager(mLayoutManager);
 
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
+
             }
 
             @Override
