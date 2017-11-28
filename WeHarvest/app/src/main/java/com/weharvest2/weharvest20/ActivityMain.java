@@ -52,8 +52,9 @@ public class ActivityMain extends ActivityBase
                     //AGREGAR AL ARRAYLIST
                     recipes.add(newRecipe);
                 }
-                
+
                 Collections.reverse(recipes);
+
                 adapter = new RecipeAdapter(getApplicationContext(), recipes);
 
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -68,6 +69,8 @@ public class ActivityMain extends ActivityBase
                 Toast.makeText(getApplicationContext(), "Canceled", Toast.LENGTH_LONG).show();
             }
         });
+
+
 
     }
 
