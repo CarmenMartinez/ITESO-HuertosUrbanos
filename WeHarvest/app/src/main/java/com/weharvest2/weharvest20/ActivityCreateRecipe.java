@@ -50,51 +50,48 @@ public class ActivityCreateRecipe extends ActivityBase {
     }
 
     public void createNewRecipe(View v){
-        try {
-            if (title.getText().toString().equals(""))
-                title.setError("This field cannot be blank");//TODO cambiar texto por string
-            else if (content.getText().toString().equals(""))
-                content.setError("Please make a body to the publication");//TODO cambiar texto por string
-            else {
-                String postId = mDatabase.push().getKey();
-                Recipe recipe = new Recipe(Session.getUserSession().getUsername(), title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
-                //TODO check the activity.
-                //Options: ActivityRecipes or ActivityMain
-                switch(recipe.getCategory()){
-                    case "Seed":
-                        Intent intentS = new Intent(this, ActivitySeeds.class);
-                        startActivity(intentS);
-                        finish();
-                        break;
-                    case "Ground":
-                        Intent intentG = new Intent(this, ActivityGround.class);
-                        startActivity(intentG);
-                        finish();
-                        break;
-                    case "Compound":
-                        Intent intentC = new Intent(this, ActivityCompound.class);
-                        startActivity(intentC);
-                        finish();
-                        break;
-                    case "Vertical Orchard":
-                        Intent intentV = new Intent(this, ActivityVerticalOrchard.class);
-                        startActivity(intentV);
-                        finish();
-                        break;
-                    default:
-                        Intent intent = new Intent(this, ActivityRecipes.class);
-                        startActivity(intent);
-                        finish();
-
-
-                }
-
+        
+        if (title.getText().toString().equals(""))
+            title.setError("This field cannot be blank");//TODO cambiar texto por string
+        else if (content.getText().toString().equals(""))
+            content.setError("Please make a body to the publication");//TODO cambiar texto por string
+        else {
+            String postId = mDatabase.push().getKey();
+            Recipe recipe = new Recipe(Session.getUserSession().getUsername(), title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
+            mDatabase.child(postId).setValue(recipe);
+            //TODO check the activity.
+            //Options: ActivityRecipes or ActivityMain
+            switch(recipe.getCategory()){
+                case "Seed":
+                    Intent intentS = new Intent(this, ActivitySeeds.class);
+                    startActivity(intentS);
+                    finish();
+                    break;
+                case "Ground":
+                    Intent intentG = new Intent(this, ActivityGround.class);
+                    startActivity(intentG);
+                    finish();
+                    break;
+                case "Compound":
+                    Intent intentC = new Intent(this, ActivityCompound.class);
+                    startActivity(intentC);
+                    finish();
+                    break;
+                case "Vertical Orchard":
+                    Intent intentV = new Intent(this, ActivityVerticalOrchard.class);
+                    startActivity(intentV);
+                    finish();
+                    break;
+                default:
+                    Intent intent = new Intent(this, ActivityRecipes.class);
+                    startActivity(intent);
+                    finish();
+                    
+                    
             }
+            
         }
-        catch(Exception e) {
-
-        }
-
+        
     }
 
 }

@@ -17,8 +17,9 @@
 
     <string-array name="types_recipes">
         <item>Seed</item>
-        <item>Vegan</item>
-        <item>Vegetarian</item>
+        <item>Compound</item>
+        <item>Ground</item>
+        <item>Vertical Orchard</item>
     </string-array>
 
     <string name="nav_explore">Explore</string>
