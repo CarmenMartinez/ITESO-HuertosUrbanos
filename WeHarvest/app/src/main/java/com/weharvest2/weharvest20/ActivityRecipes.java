@@ -35,7 +35,6 @@ public class ActivityRecipes extends ActivityBase {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ActivitySeeds.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -44,7 +43,6 @@ public class ActivityRecipes extends ActivityBase {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ActivityGround.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -53,7 +51,6 @@ public class ActivityRecipes extends ActivityBase {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ActivityCompound.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -62,8 +59,6 @@ public class ActivityRecipes extends ActivityBase {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ActivityVerticalOrchard.class);
                 startActivity(intent);
-                finish();
-
             }
         });
     }

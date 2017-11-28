@@ -64,13 +64,13 @@
 
         <activity
             android:name=".ActivityGround"
-            android:label="Compound"
+            android:label="Ground"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
         <activity
             android:name=".ActivityVerticalOrchard"
-            android:label="Compound"
+            android:label="Vertical Orchard"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 

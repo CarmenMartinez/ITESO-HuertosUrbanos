@@ -70,8 +70,6 @@ public class ActivityMain extends ActivityBase
             }
         });
 
-
-
     }
 
     public void createRecipe(View view) {
