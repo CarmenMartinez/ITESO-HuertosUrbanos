@@ -66,7 +66,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
         android:layout_marginRight="20dp"
-        app:backgroundTint="@color/buttonsColor"
+        app:backgroundTint="@color/greenThemeForButtons"
         android:src="@mipmap/add"
         android:onClick="createRecipe"/>
 
