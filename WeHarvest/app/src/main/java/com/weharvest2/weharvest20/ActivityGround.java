@@ -3,6 +3,8 @@ package com.weharvest2.weharvest20;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -24,6 +26,7 @@ public class ActivityGround extends ActivityBase {
     private RecyclerView recyclerView;
     private RecipeAdapter adapter;
     private ArrayList<Recipe> recipes;
+    protected TextView empty;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
 
     @Override
@@ -33,6 +36,7 @@ public class ActivityGround extends ActivityBase {
 
         onCreateDrawer();
 
+        empty = (TextView) findViewById(R.id.activity_ground_textview);
         recyclerView = (RecyclerView) findViewById (R.id.recycler_view_activity_ground);
 
         DatabaseReference userDBR = mDatabase.child("recipes");
@@ -50,14 +54,19 @@ public class ActivityGround extends ActivityBase {
 
                 Collections.reverse(recipes);
 
-                adapter = new RecipeAdapter(getApplicationContext(), recipes);
-                //adapter = new RecipeAdapter(this, recipeList);
+                if (!recipes.isEmpty()) {
+                    adapter = new RecipeAdapter(getApplicationContext(), recipes);
 
-                RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-                recyclerView.setLayoutManager(mLayoutManager);
+                    RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+                    recyclerView.setLayoutManager(mLayoutManager);
 
-                recyclerView.setAdapter(adapter);
-                adapter.notifyDataSetChanged();
+                    recyclerView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+                    empty.setText("");
+                    empty.setVisibility(View.GONE);
+
+                } else
+                    empty.setText("Create ground recipes to see them here!");
 
 
             }
