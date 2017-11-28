@@ -20,6 +20,7 @@ public class ActivityCreateRecipe extends ActivityBase {
     protected Button button;
     protected EditText title;
     protected EditText content;
+    protected String activityCalled;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("recipes");
 
     @Override
@@ -27,6 +28,10 @@ public class ActivityCreateRecipe extends ActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_recipe);
         onCreateDrawer();
+
+        Intent intent = getIntent();
+
+        activityCalled = intent.getStringExtra("Activity");
 
         title = (EditText) findViewById(R.id.activity_create_recipe_title);
         content = (EditText) findViewById(R.id.activity_create_recipe_content);
@@ -52,33 +57,39 @@ public class ActivityCreateRecipe extends ActivityBase {
             mDatabase.child(postId).setValue(recipe);
             //TODO check the activity.
             //Options: ActivityRecipes or ActivityMain
-            switch(recipe.getCategory()){
-                case "Seed":
-                    Intent intentS = new Intent(this, ActivitySeeds.class);
-                    startActivity(intentS);
-                    finish();
-                    break;
-                case "Ground":
-                    Intent intentG = new Intent(this, ActivityGround.class);
-                    startActivity(intentG);
-                    finish();
-                    break;
-                case "Compound":
-                    Intent intentC = new Intent(this, ActivityCompound.class);
-                    startActivity(intentC);
-                    finish();
-                    break;
-                case "Vertical Orchard":
-                    Intent intentV = new Intent(this, ActivityVerticalOrchard.class);
-                    startActivity(intentV);
-                    finish();
-                    break;
-                default:
-                    Intent intent = new Intent(this, ActivityRecipes.class);
-                    startActivity(intent);
-                    finish();
-                    
-                    
+
+            if(activityCalled.equals("Recipes")) {
+                switch (recipe.getCategory()) {
+                    case "Seed":
+                        Intent intentS = new Intent(this, ActivitySeeds.class);
+                        startActivity(intentS);
+                        finish();
+                        break;
+                    case "Ground":
+                        Intent intentG = new Intent(this, ActivityGround.class);
+                        startActivity(intentG);
+                        finish();
+                        break;
+                    case "Compound":
+                        Intent intentC = new Intent(this, ActivityCompound.class);
+                        startActivity(intentC);
+                        finish();
+                        break;
+                    case "Vertical Orchard":
+                        Intent intentV = new Intent(this, ActivityVerticalOrchard.class);
+                        startActivity(intentV);
+                        finish();
+                        break;
+                    default:
+                        Intent intent = new Intent(this, ActivityRecipes.class);
+                        startActivity(intent);
+                        finish();
+                }
+            }
+            else {
+                Intent intent = new Intent(this, ActivityMain.class);
+                startActivity(intent);
+                finish();
             }
             
         }
