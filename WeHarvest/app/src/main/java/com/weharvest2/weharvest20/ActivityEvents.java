@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.weharvest2.weharvest20.beans.Event;
-import com.weharvest2.weharvest20.beans.Recipe;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
 import java.util.ArrayList;

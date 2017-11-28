@@ -37,11 +37,22 @@ public class ActivityCreateEvent extends AppCompatActivity {
 
     public void createNewEvent(View view){
         String postId = mDatabase.push().getKey();
-        Event event = new Event(Session.getUserSession().getUsername().toString(), title.getText().toString(), description.getText().toString(), date.getText().toString(), place.getText().toString());
-        mDatabase.child(postId).setValue(event);
-        Intent intent = new Intent(this, ActivityEvents.class);
-        startActivity(intent);
-        finish();
+        if(title.getText().toString().isEmpty()){
+            title.setError("This field cannot be blank");
+        }else if(description.getText().toString().isEmpty()){
+            description.setError("This field cannot be blank");
+        }else if(date.getText().toString().isEmpty()){
+            date.setError("This field cannot be blank");
+        }else if(place.getText().toString().isEmpty()){
+            place.setError("This field cannot be blank");
+        }
+        else {
+            Event event = new Event(Session.getUserSession().getUsername().toString(), title.getText().toString(), description.getText().toString(), date.getText().toString(), place.getText().toString());
+            mDatabase.child(postId).setValue(event);
+            Intent intent = new Intent(this, ActivityEvents.class);
+            startActivity(intent);
+            finish();
+        }
 
     }
 }
