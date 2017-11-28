@@ -28,12 +28,12 @@
     <dimen name="card_album_radius">0dp</dimen>
     <dimen name="album_cover_height">160dp</dimen>
     <dimen name="title_padding">10dp</dimen>
-    <dimen name="recipe_title">24dp</dimen>
+    <dimen name="recipe_title">20dp</dimen>
     <dimen name="recipe_description_padding_bottom">5dp</dimen>
-    <dimen name="recipe_description">20dp</dimen>
-    <dimen name="recipe_username">18dp</dimen>
-    <dimen name="recipe_date">16dp</dimen>
-    <dimen name="recipe_category">16dp</dimen>
+    <dimen name="recipe_description">18dp</dimen>
+    <dimen name="recipe_username">16dp</dimen>
+    <dimen name="recipe_date">14dp</dimen>
+    <dimen name="recipe_category">14dp</dimen>
     <dimen name="ic_album_overflow_width">20dp</dimen>
     <dimen name="ic_album_overflow_height">30dp</dimen>
     <dimen name="ic_album_overflow_margin_top">10dp</dimen>

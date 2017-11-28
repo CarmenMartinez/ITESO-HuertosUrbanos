@@ -48,10 +48,10 @@ public class ActivityGround extends ActivityBase {
                         recipes.add(newRecipe);
                 }
 
-
                 Collections.reverse(recipes);
 
                 adapter = new RecipeAdapter(getApplicationContext(), recipes);
+                //adapter = new RecipeAdapter(this, recipeList);
 
                 RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
                 recyclerView.setLayoutManager(mLayoutManager);
@@ -69,6 +69,11 @@ public class ActivityGround extends ActivityBase {
         });
 
 
+        /*
+        Aquí recibiría la lista en donde estan guardadas las recetas
+        y agregaria al arraylist local las que sean iguales a la categoria
+        luego ya las imprimiría
+         */
 
     }
 

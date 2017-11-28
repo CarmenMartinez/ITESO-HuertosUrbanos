@@ -74,6 +74,7 @@ public class ActivityMain extends ActivityBase
 
     public void createRecipe(View view) {
         Intent intent = new Intent(this, ActivityCreateRecipe.class);
+        intent.putExtra("Activity", "Main");
         startActivity(intent);
     }
 }
