@@ -29,8 +29,6 @@ public class ActivityGround extends ActivityBase {
 
         recipeList = new ArrayList<>();
 
-
-
         adapter = new RecipeAdapter(this, recipeList);
 
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
@@ -54,7 +52,6 @@ public class ActivityGround extends ActivityBase {
         Recipe r3 = new Recipe(user, "adios", "Solo AMA LA FREAKING LECTURA", "12/12/17", c);
         recipeList.add(r3);
         adapter.notifyDataSetChanged();
-
 
         /*
         Aquí recibiría la lista en donde estan guardadas las recetas
