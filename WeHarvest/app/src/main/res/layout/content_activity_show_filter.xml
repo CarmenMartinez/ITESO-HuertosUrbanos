@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="#FFFF"
     tools:context=".ActivityShowFilter"
-    tools:showIn="@layout/activity_show_filter">
+    tools:showIn="@layout/activity_show_filter"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -14,6 +15,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:scrollbars="vertical"
-        android:background="#e0e0e0"/>
+        android:background="#e0e0e0"
+        android:paddingBottom="@dimen/title_padding"/>
 
 </RelativeLayout>

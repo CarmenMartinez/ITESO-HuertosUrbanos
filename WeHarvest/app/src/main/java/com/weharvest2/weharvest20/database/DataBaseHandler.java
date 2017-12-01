@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataBaseHandler extends SQLiteOpenHelper {
 
 
-    private static final String DATABASE_NAME = "MyCalendar2.db";
+    private static final String DATABASE_NAME = "other.db";
     private static final int DATABASE_VERSION = 1;
 
     //Table names
@@ -38,6 +38,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     public static final String  KEY_PLANT_ID = "idPlant";
     public static final String KEY_PLANT_NAME = "name";
     public static final String  KEY_PERIOD= "period";
+    public static final String KEY_DESCRIPTION = "description";
 
     private static DataBaseHandler dataBaseHandler;
     private DataBaseHandler(Context context){
@@ -56,7 +57,8 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         String CREATE_PLANT_TABLE = "CREATE TABLE " + TABLE_PLANT + "("
                 + KEY_PLANT_ID + " INTEGER PRIMARY KEY,"
                 + KEY_PLANT_NAME + " TEXT,"
-                + KEY_PERIOD + " TEXT)";
+                + KEY_PERIOD +" TEXT,"
+                + KEY_DESCRIPTION+" TEXT)";
 
         db.execSQL(CREATE_PLANT_TABLE);
 
@@ -79,44 +81,44 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_MONTH + " (" + KEY_MONTH_ID + "," + KEY_MONTH_NAME + ") VALUES (11, 'November')");
         db.execSQL("INSERT INTO " + TABLE_MONTH + " (" + KEY_MONTH_ID + "," + KEY_MONTH_NAME + ") VALUES (12, 'December')");
 
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (1, 'Acelga', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (2, 'Ajo', '8-4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (3, 'Alcachofa', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (4, 'Apio', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (5, 'Berenjena', '5-6 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (6, 'Borraja', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (7, 'Brócoli', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (8, 'Calabacin', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (9, 'Calabaza', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (10, 'Canónigos', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (11, 'Cardillo', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (12, 'Cardo', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (13, 'Cebolla', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (14, 'Cohollo', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (15, 'Col', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (16, 'Coliflor', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (17, 'Escarola', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (18, 'Espárrago', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (19, 'Espinaca', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (20, 'Fresas', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (21, 'Guisante', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (22, 'Haba', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (23, 'Judías', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (24, 'Lechuga', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (25, 'Maíz', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (26, 'Melón', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (27, 'Nabo', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (28, 'Patata', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (29, 'Pepino', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (30, 'Perejil', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (31, 'Pimiento', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (32, 'Puerro', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (33, 'Rabanilla', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (34, 'Rábano', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (35, 'Remolacha', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (36, 'Sandía', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (37, 'Tomate', '4 meses')");
-        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + ") VALUES (38, 'Zanahoria', '4 meses')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (1, 'Acelga', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (2, 'Ajo', '8-4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (3, 'Alcachofa', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (4, 'Apio', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (5, 'Berenjena', '5-6 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (6, 'Borraja', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (7, 'Brócoli', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (8, 'Calabacin', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (9, 'Calabaza', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (10, 'Canónigos', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (11, 'Cardillo', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (12, 'Cardo', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (13, 'Cebolla', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (14, 'Cohollo', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (15, 'Col', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (16, 'Coliflor', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (17, 'Escarola', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (18, 'Espárrago', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (19, 'Espinaca', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (20, 'Fresas', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (21, 'Guisante', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (22, 'Haba', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (23, 'Judías', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (24, 'Lechuga', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (25, 'Maíz', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (26, 'Melón', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (27, 'Nabo', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (28, 'Patata', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (29, 'Pepino', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (30, 'Perejil', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (31, 'Pimiento', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (32, 'Puerro', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (33, 'Rabanilla', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (34, 'Rábano', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (35, 'Remolacha', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (36, 'Sandía', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (37, 'Tomate', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
+        db.execSQL("INSERT INTO " + TABLE_PLANT + " (" + KEY_PLANT_ID + "," + KEY_PLANT_NAME + "," + KEY_PERIOD  + "," + KEY_DESCRIPTION + ") VALUES (38, 'Zanahoria', '4 meses', 'This is an example of a description. This plant is very good for your health. Eat it.')");
 
 
         String CREATE_SOW_MONTH_PLANT_TABLE ="CREATE TABLE "+ TABLE_SOW_MONTH_PLANT + "("

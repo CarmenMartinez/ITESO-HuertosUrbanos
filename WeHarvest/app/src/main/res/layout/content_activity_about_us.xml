@@ -13,19 +13,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="WeHarvest"
-            style="@style/textTitle"/>
+            android:padding="@dimen/title_padding"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:text="We Harvest"
+            android:background="#00701a"
+            android:textColor="@android:color/white"
+            />
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Who are us?"
+            android:text="Who are we?"
             style="@style/textview"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/yunkText"
+            android:text="We are a company that cares about creating solutions that help your health and the envrionment. "
             style="@style/simpleText"/>
 
     </LinearLayout>

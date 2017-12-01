@@ -7,7 +7,9 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context="com.weharvest2.weharvest20.ActivityFilter"
-    tools:showIn="@layout/app_bar_activity_filter">
+    tools:showIn="@layout/app_bar_activity_filter"
+    android:background="#e0e0e0"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,16 +17,41 @@
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
+
+        <TextView
+            android:paddingTop="@dimen/desc_padding"
+            android:paddingLeft="@dimen/desc_padding"
+            android:paddingRight="@dimen/desc_padding"
+            android:paddingBottom="@dimen/title_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Learn when to sow a plant and what fruits and vegetables are in season."
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:background="#00701a"
+            />
+        <TextView
+            android:paddingBottom="@dimen/desc_padding"
+            android:paddingLeft="@dimen/desc_padding"
+            android:paddingRight="@dimen/desc_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a plant, a month and the mode. Choosing Default means you want to know all the months or plants for a given plant or month, respectively."
+            android:textColor="@android:color/white"
+            android:background="#00701a"
+            />
+
         <RelativeLayout
             android:id="@+id/left_panel"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingTop="80dp"
+            android:paddingTop="50dp"
             android:paddingLeft="50dp"
             android:layout_gravity="center_vertical">
             <LinearLayout
                 android:id="@+id/name_tags"
-                android:paddingTop="100sp"
+                android:paddingTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -35,20 +62,20 @@
                     android:layout_height="wrap_content"
                     style="@style/simpleText"
                     android:text="Plant"
-                    android:paddingLeft="@dimen/desc_padding"/>
+                    android:paddingLeft="25dp"/>
                 <TextView
                     android:id="@+id/simpleText_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/simpleText"
                     android:text="Month"
-                    android:paddingLeft="@dimen/desc_padding"/>
+                    android:paddingLeft="25dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/simpleText"
                     android:text="Mode"
-                    android:paddingLeft="@dimen/desc_padding"/>
+                    android:paddingLeft="25dp"/>
 
             </LinearLayout>
 
@@ -57,7 +84,7 @@
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@id/name_tags"
                 android:orientation="vertical"
-                android:paddingTop="100dp">
+                android:paddingTop="10dp">
                 <Spinner
                     android:id="@+id/activity_filter_plant"
                     android:layout_width="wrap_content"

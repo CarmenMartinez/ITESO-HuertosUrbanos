@@ -14,16 +14,26 @@ public class Plant implements Parcelable{
     private String plantName;
     private String period;
     ArrayList<Month> months;
+    private String description;
 
     public Plant(){
 
     }
 
-    public Plant(int idPlant, String plantName, String period, ArrayList<Month> months) {
+    public Plant(int idPlant, String plantName, String period, ArrayList<Month> months, String description) {
         this.idPlant = idPlant;
         this.plantName = plantName;
         this.period = period;
         this.months = months;
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     protected Plant(Parcel in) {
@@ -31,6 +41,7 @@ public class Plant implements Parcelable{
         plantName = in.readString();
         period = in.readString();
         months = in.createTypedArrayList(Month.CREATOR);
+        description = in.readString();
     }
 
     public static final Creator<Plant> CREATOR = new Creator<Plant>() {
@@ -89,5 +100,6 @@ public class Plant implements Parcelable{
         dest.writeString(plantName);
         dest.writeString(period);
         dest.writeTypedList(months);
+        dest.writeString(description);
     }
 }

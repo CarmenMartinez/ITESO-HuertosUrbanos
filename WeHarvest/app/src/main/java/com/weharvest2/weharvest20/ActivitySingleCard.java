@@ -11,6 +11,7 @@ import com.weharvest2.weharvest20.database.DBManager;
 import com.weharvest2.weharvest20.database.DataBaseHandler;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -52,7 +53,7 @@ public class ActivitySingleCard extends ActivityBase {
 
         dh = DataBaseHandler.getInstance(this);
         db = new DBManager(dh, mode);
-        
+
 
         recyclerView = (RecyclerView) findViewById (R.id.recycler_view);
 
@@ -93,10 +94,13 @@ public class ActivitySingleCard extends ActivityBase {
             if(bandera){
                 Month m = new Month();
                 m.setMonthName("No months");
-                p.setMonths(null);
+                ArrayList<Month> months = new ArrayList<>();
+                months.add(m);
+                p.setMonths(months);
                 p.setPeriod("No period");
                 p.setPlantName("This match does not exist");
-                p.setIdPlant(-1);
+                p.setDescription("No description");
+                p.setIdPlant(404);
             }
 
         }

@@ -27,7 +27,8 @@ public class ControlPlant {
         ArrayList<Plant> plants = new ArrayList<>();
         String selectQuery = "SELECT " + DataBaseHandler.KEY_PLANT_ID + ", "
                 + DataBaseHandler.KEY_PLANT_NAME+ ", "
-                + DataBaseHandler.KEY_PERIOD
+                + DataBaseHandler.KEY_PERIOD +", "
+                + DataBaseHandler.KEY_DESCRIPTION
                 + " FROM " + DataBaseHandler.TABLE_PLANT;
 
         SQLiteDatabase db = dh.getReadableDatabase();
@@ -39,6 +40,7 @@ public class ControlPlant {
             plant.setPlantName(cursor.getString(1));
             plant.setPeriod(cursor.getString(2));
             //plant.setMonths(cm.getAllMonthsByPlant(plant.getPlantName(), dh));
+            plant.setDescription(cursor.getString(3));
             plants.add(plant);
         }
         try {

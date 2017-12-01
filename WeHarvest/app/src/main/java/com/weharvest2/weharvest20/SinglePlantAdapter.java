@@ -53,7 +53,7 @@ public class SinglePlantAdapter extends RecyclerView.Adapter<SinglePlantAdapter.
         holder.title.setText(plant.getPlantName());
         holder.period.setText(plant.getPeriod());
         if(plant.getMonths()==null){
-            holder.months.setText("");
+            holder.months.setText("No months");
         }
         else {
             for (int i = 0; i < plant.getMonths().size(); i++) {
@@ -61,8 +61,7 @@ public class SinglePlantAdapter extends RecyclerView.Adapter<SinglePlantAdapter.
             }
             holder.months.setText(monthStrings.substring(0, monthStrings.length() - 2));
         }
-        String provisonalDesc = "This is an example of a description. This plant is very good for your health. Eat it.";
-        holder.description.setText(provisonalDesc);
+        holder.description.setText(plant.getDescription());
     }
 
     @Override
