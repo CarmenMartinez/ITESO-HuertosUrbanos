@@ -1,7 +1,6 @@
 package com.weharvest2.weharvest20;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,10 +11,9 @@ import com.weharvest2.weharvest20.gui.ActivityBase;
 
 public class ActivityFilter extends ActivityBase {
 
-    protected Spinner classification;
-    protected Spinner cycle;
-    protected Spinner season;
-    protected Spinner state;
+    protected Spinner plant;
+    protected Spinner month;
+    protected Spinner mode;
     protected Button button;
 
     @Override
@@ -25,46 +23,65 @@ public class ActivityFilter extends ActivityBase {
 
         onCreateDrawer();
 
-        classification = (Spinner) findViewById(R.id.activity_filter_classification);
-        cycle = (Spinner) findViewById(R.id.activity_filter_cycle);
-        season = (Spinner) findViewById(R.id.activity_filter_season);
-        state = (Spinner) findViewById(R.id.activity_filter_state);
+        plant = (Spinner) findViewById(R.id.activity_filter_plant);
+        month = (Spinner) findViewById(R.id.activity_filter_month);
+        mode = (Spinner) findViewById(R.id.activity_filter_mode);
 
         button = (Button) findViewById(R.id.activity_filter_button);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.classification_array, android.R.layout.simple_spinner_item);
+                R.array.plant_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        classification.setAdapter(adapter);
+        plant.setAdapter(adapter);
 
         adapter = ArrayAdapter.createFromResource(this,
-                R.array.cycle_array, android.R.layout.simple_spinner_item);
+                R.array.month_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        cycle.setAdapter(adapter);
+        month.setAdapter(adapter);
 
         adapter = ArrayAdapter.createFromResource(this,
-                R.array.season_array, android.R.layout.simple_spinner_item);
+                R.array.mode_array, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        season.setAdapter(adapter);
+        mode.setAdapter(adapter);
 
-        adapter = ArrayAdapter.createFromResource(this,
-                R.array.state_array, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        state.setAdapter(adapter);
+
+
     }
 
     public void filter(View v) {
+
         // FILTRAR LOS DATOS DE BASE DE DATOS
 
-        Intent intent = new Intent(this, ActivitySowingHarvesting.class);
-        startActivity(intent);
+        String plantSelect =  plant.getSelectedItem().toString();
+        String monthSelect =  month.getSelectedItem().toString();
+        String modeSelect =  mode.getSelectedItem().toString();
+                /*
+    Queries
+    Si selecciona Planta (default) - Mes (default) - Sow ----------> Regresa todas las plantas (Cardview de la planta) YA
+    Si selecciona Planta - Mes (default) - Sow --------------------> getAllMonthsByPlant en ControlMonth (Lista de meses)
+    Si selecciona Planta (default)- Mes - Sow ---------------------> getAllPlantsByMonth (Card View de Planta con period) YA
+    Si selecciona Planta - Mes - Sow ------------------------------> Si lo encuentra, un texto que diga->Possible*/
+        if(plantSelect.equals("Default")){
+            Intent intent = new Intent(this, ActivityShowFilter.class);
+            intent.putExtra("plantSelect", plantSelect);
+            intent.putExtra("monthSelect", monthSelect);
+            intent.putExtra("modeSelect", modeSelect);
+            startActivity(intent);
+        }
+        else {
+            //getAllMonthsByPlant en ControlMonth (Lista de meses)
+            Intent intent = new Intent(this, ActivitySingleCard.class);
+            intent.putExtra("plantSelect", plantSelect);
+            intent.putExtra("monthSelect", monthSelect);
+            intent.putExtra("modeSelect", modeSelect);
+            startActivity(intent);
+        }
+
     }
 }

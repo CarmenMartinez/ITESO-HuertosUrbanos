@@ -7,7 +7,9 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context="com.weharvest2.weharvest20.ActivityFilter"
-    tools:showIn="@layout/app_bar_activity_filter">
+    tools:showIn="@layout/app_bar_activity_filter"
+    android:background="#e0e0e0"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,56 +19,102 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:paddingTop="@dimen/desc_padding"
+            android:paddingLeft="@dimen/desc_padding"
+            android:paddingRight="@dimen/desc_padding"
+            android:paddingBottom="@dimen/title_padding"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/simpleText"
-            android:text="Classification" />
-
-        <Spinner
-            android:id="@+id/activity_filter_classification"
-            android:layout_width="@dimen/activity_login_edit_text_dimen"
-            android:layout_height="wrap_content"
-            style="@style/textTitle"
-            android:entries="@array/classification_array"/>
-
+            android:text="Learn when to sow a plant and what fruits and vegetables are in season."
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:background="#00701a"
+            />
         <TextView
+            android:paddingBottom="@dimen/desc_padding"
+            android:paddingLeft="@dimen/desc_padding"
+            android:paddingRight="@dimen/desc_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a plant, a month and the mode. Choosing Default means you want to know all the months or plants for a given plant or month, respectively."
+            android:textColor="@android:color/white"
+            android:background="#00701a"
+            />
+
+        <RelativeLayout
+            android:id="@+id/left_panel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/simpleText"
-            android:text="Agricultural cycle" />
+            android:layout_height="match_parent"
+            android:paddingTop="50dp"
+            android:paddingLeft="50dp"
+            android:layout_gravity="center_vertical">
+            <LinearLayout
+                android:id="@+id/name_tags"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/plant_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/simpleText"
+                    android:text="Plant"
+                    android:paddingLeft="25dp"/>
+                <TextView
+                    android:id="@+id/simpleText_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/simpleText"
+                    android:text="Month"
+                    android:paddingLeft="25dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/simpleText"
+                    android:text="Mode"
+                    android:paddingLeft="25dp"/>
 
-        <Spinner
-            android:id="@+id/activity_filter_cycle"
-            android:layout_width="@dimen/activity_login_edit_text_dimen"
-            android:layout_height="wrap_content"
-            style="@style/textTitle"
-            android:entries="@array/cycle_array"/>
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/simpleText"
-            android:text="Season" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/name_tags"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+                <Spinner
+                    android:id="@+id/activity_filter_plant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/plant_array"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_toRightOf="@id/plant_text"
+                    />
+                <Spinner
+                    android:id="@+id/activity_filter_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/month_array"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_toRightOf="@id/simpleText_text"
+                    />
+                <Spinner
+                    android:id="@+id/activity_filter_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:entries="@array/mode_array"
+                    android:layout_gravity="right"
+                    />
 
-        <Spinner
-            android:id="@+id/activity_filter_season"
-            android:layout_width="@dimen/activity_login_edit_text_dimen"
-            android:layout_height="wrap_content"
-            style="@style/textTitle"
-            android:entries="@array/season_array"/>
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/simpleText"
-            android:text="State" />
+        </RelativeLayout>
 
-        <Spinner
-            android:id="@+id/activity_filter_state"
-            android:layout_width="@dimen/activity_login_edit_text_dimen"
-            android:layout_height="wrap_content"
-            style="@style/textTitle"
-            android:entries="@array/state_array"/>
+
 
     </LinearLayout>
 
