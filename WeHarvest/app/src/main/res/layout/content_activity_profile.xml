@@ -44,7 +44,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/yunkText"
+        android:text="@string/profileText"
         style="@style/simpleText"/>
 
 </LinearLayout>

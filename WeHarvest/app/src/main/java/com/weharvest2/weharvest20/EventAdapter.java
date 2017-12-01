@@ -94,7 +94,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
     public void onBindViewHolder(EventAdapter.MyViewHolder holder, int position) {
         Event event = eventList.get(position);
         holder.title.setText(event.getTitle());
-        holder.place.setText(event.getPlace());
+        holder.place.setText("Description: " + event.getDescription() + " - Place: " + event.getPlace());
         //holder.year.setText(event.getDate());
 
         //CHECAR COMO SE VA A OBTENER MES Y DIA

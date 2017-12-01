@@ -20,7 +20,12 @@
             android:background="#00701a"
             android:textColor="@android:color/white"
             />
-
+    <ImageView
+        android:layout_width="@dimen/img_width_height"
+        android:layout_height="@dimen/img_width_height"
+        android:src="@mipmap/events"
+        android:tint="@android:color/white"
+        />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
