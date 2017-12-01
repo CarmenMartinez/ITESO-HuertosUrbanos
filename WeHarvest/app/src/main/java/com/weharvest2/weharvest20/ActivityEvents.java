@@ -67,10 +67,9 @@ public class ActivityEvents extends ActivityBase {
                 for (DataSnapshot event : contactChildren) {
                     Event newEvent = event.getValue(Event.class);
                     String eventDate = newEvent.getDate();
-                    int eventYear = Integer.parseInt(eventDate.substring(6,10));
+                    int eventYear = Integer.parseInt(eventDate.substring(6));
                     int eventMonth = Integer.parseInt(eventDate.substring(3,5));
                     int eventDay = Integer.parseInt(eventDate.substring(0,2));
-                    Toast.makeText(getApplicationContext(), thisDay + "<" + eventDay, Toast.LENGTH_LONG).show();
                     if (thisYear < eventYear || (thisYear == eventYear && thisMonth < eventMonth)
                             || (thisYear == eventYear && thisMonth == eventMonth && thisDay < eventDay))
                         events.add(newEvent);

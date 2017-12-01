@@ -66,11 +66,23 @@ public class ActivityCreateEvent extends AppCompatActivity {
     public void showDatePickerDialog(View v) {
         //DatePickerFragment newFragment = new DatePickerFragment();
         //newFragment.show(getSupportFragmentManager(), "datePicker");
-        DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener(){
+        DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 // +1 because january is zero
-                final String selectedDate = day + " / " + (month+1) + " / " + year;
+                String selectedDate = "";
+                if (day < 10) {
+                    selectedDate = "0" + day;
+                } else {
+                    selectedDate = day + "";
+                }
+                if((month + 1) < 10){
+                    selectedDate += "/0" + (month + 1);
+                }else {
+                    selectedDate += "/" + (month + 1);
+                }
+                selectedDate += "/" + year;
+
                 date.setText(selectedDate);
             }
         });
