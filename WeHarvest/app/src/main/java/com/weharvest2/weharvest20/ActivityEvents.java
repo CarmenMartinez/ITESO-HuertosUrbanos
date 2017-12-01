@@ -71,11 +71,12 @@ public class ActivityEvents extends ActivityBase {
                     int eventMonth = Integer.parseInt(eventDate.substring(3,5));
                     int eventDay = Integer.parseInt(eventDate.substring(0,2));
                     if (thisYear < eventYear || (thisYear == eventYear && thisMonth < eventMonth)
-                            || (thisYear == eventYear && thisMonth == eventMonth && thisDay < eventDay))
+                            || (thisYear == eventYear && thisMonth == eventMonth && thisDay == eventDay))
                         events.add(newEvent);
 
                 }
                 Collections.reverse(events);
+                Collections.sort(events, new EventsComparator());
 
                 adapter = new EventAdapter(getApplicationContext(), events);
 
