@@ -22,7 +22,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
     private ArrayList<Event> eventList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, place, month, day, date;
+        public TextView title, place, month, day; //date;
 
         public MyViewHolder(View view){
             super(view);
@@ -30,7 +30,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
             place = (TextView) view.findViewById(R.id.event_place);
             month = (TextView) view.findViewById(R.id.month);
             day = (TextView)view.findViewById(R.id.day);
-            date = (TextView)view.findViewById(R.id.event_date);
+            //date = (TextView)view.findViewById(R.id.event_date);
         }
     }
 
@@ -95,7 +95,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.MyViewHolder
         Event event = eventList.get(position);
         holder.title.setText(event.getTitle());
         holder.place.setText(event.getPlace());
-        holder.date.setText(event.getDate());
+        //holder.date.setText(event.getDate());
 
         //CHECAR COMO SE VA A OBTENER MES Y DIA
         holder.month.setText(getMonthName(event.getDate().toString().substring(5,7)));
