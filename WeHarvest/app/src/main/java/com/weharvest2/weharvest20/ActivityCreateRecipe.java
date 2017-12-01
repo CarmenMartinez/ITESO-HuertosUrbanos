@@ -53,7 +53,7 @@ public class ActivityCreateRecipe extends ActivityBase {
             content.setError("Please make a body to the publication");//TODO cambiar texto por string
         else {
             String postId = mDatabase.push().getKey();
-            Recipe recipe = new Recipe(Session.getUserSession().getUsername(), title.getText().toString(), content.getText().toString(), "26/09/1996", spinner.getSelectedItem().toString());
+            Recipe recipe = new Recipe(Session.getUserSession().getUsername(), title.getText().toString(), content.getText().toString(), "01/12/2017", spinner.getSelectedItem().toString());
             mDatabase.child(postId).setValue(recipe);
             //TODO check the activity.
             //Options: ActivityRecipes or ActivityMain
