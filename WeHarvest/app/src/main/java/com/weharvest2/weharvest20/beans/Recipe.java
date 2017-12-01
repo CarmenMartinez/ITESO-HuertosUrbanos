@@ -6,7 +6,7 @@ package com.weharvest2.weharvest20.beans;
 
 public class Recipe {
     private String username;
-    private String title;
+    private String recipeTitle;
     private String description;
     private String date;
     private String category;
@@ -17,7 +17,7 @@ public class Recipe {
 
     public Recipe(String username, String title, String description, String date, String category) {
         this.username = username;
-        this.title = title;
+        this.recipeTitle = title;
         this.description = description;
         this.date = date;
         this.category = category;
@@ -33,11 +33,11 @@ public class Recipe {
     }
 
     public String getRecipeTitle() {
-        return title;
+        return recipeTitle;
     }
 
-    public void setTitle(String titulo) {
-        this.title = title;
+    public void setTitle(String title) {
+        this.recipeTitle = title;
     }
 
     public String getDescription() {
