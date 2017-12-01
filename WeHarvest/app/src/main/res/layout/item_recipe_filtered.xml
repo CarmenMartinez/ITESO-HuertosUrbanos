@@ -15,18 +15,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="8dp"
-        card_view:cardBackgroundColor="@color/OrangeThemeForCards">
+        card_view:cardBackgroundColor="@android:color/white">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/background_username">
+                android:id="@+id/background_username"
+                android:background="@color/greenDark">
                 <TextView
                     android:id="@+id/username"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="@dimen/recipe_description_padding_bottom"
                     android:paddingLeft="@dimen/title_padding"
@@ -36,7 +37,21 @@
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
                     />
-            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/title_padding"
+                    android:paddingBottom="@dimen/recipe_description_padding_bottom"
+                    android:textSize="@dimen/recipe_date"
+                    android:textColor="@android:color/white"
+                    android:gravity="right"
+                    android:padding="@dimen/title_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/username"
+                    />
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/title"
@@ -47,7 +62,7 @@
                 android:paddingLeft="@dimen/title_padding"
                 android:paddingRight="@dimen/title_padding"
                 android:textSize="@dimen/recipe_title"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/black"/>
 
             <TextView
                 android:id="@+id/description"
@@ -58,7 +73,7 @@
                 android:paddingLeft="@dimen/title_padding"
                 android:paddingRight="@dimen/title_padding"
                 android:textSize="@dimen/recipe_description"
-                android:textColor="@android:color/white"/>
+                android:textColor="@android:color/black"/>
 
             <TextView
                 android:id="@+id/category"
@@ -71,16 +86,7 @@
                 android:textSize="@dimen/recipe_category"
                 android:textColor="@android:color/white"/>
 
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/category"
-                android:paddingBottom="@dimen/recipe_description_padding_bottom"
-                android:paddingLeft="@dimen/title_padding"
-                android:paddingRight="@dimen/title_padding"
-                android:textSize="@dimen/recipe_date"
-                android:textColor="@android:color/white"/>
+
 
         </RelativeLayout>
 
