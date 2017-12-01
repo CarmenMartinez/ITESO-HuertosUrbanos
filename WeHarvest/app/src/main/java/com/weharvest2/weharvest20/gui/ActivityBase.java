@@ -17,12 +17,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.weharvest2.weharvest20.ActivityAboutUs;
 import com.weharvest2.weharvest20.ActivityEvents;
+import com.weharvest2.weharvest20.ActivityFilter;
 import com.weharvest2.weharvest20.ActivityLogin;
 import com.weharvest2.weharvest20.ActivityMain;
 import com.weharvest2.weharvest20.ActivityProfile;
 import com.weharvest2.weharvest20.ActivityRecipes;
 import com.weharvest2.weharvest20.ActivitySowingHarvesting;
 import com.weharvest2.weharvest20.R;
+import com.weharvest2.weharvest20.beans.Session;
 import com.weharvest2.weharvest20.common.Utils;
 
 /**
@@ -35,6 +37,7 @@ public class ActivityBase extends AppCompatActivity implements NavigationView.On
     protected DrawerLayout mDrawerLayout;
     protected NavigationView mNavigationView;
     protected ImageView mPhoto;
+    protected TextView mEmail;
     protected TextView mName;
     protected View mNavHeader;
 
@@ -52,19 +55,20 @@ public class ActivityBase extends AppCompatActivity implements NavigationView.On
 
         mNavHeader = mNavigationView.getHeaderView(0);
 
-        mPhoto = (ImageView) mNavHeader.findViewById(R.id.imageView);
+        //mPhoto = (ImageView) mNavHeader.findViewById(R.id.imageView);
         mName = (TextView) mNavHeader.findViewById(R.id.name);
+        mEmail = (TextView) mNavHeader.findViewById(R.id.email);
 
         loadNavHeader();
     }
 
     private void loadNavHeader() {
         // name, website
-        Bitmap photo = BitmapFactory.decodeResource(this.getResources(),
-                R.drawable.profile);
+        //Bitmap photo = BitmapFactory.decodeResource(this.getResources(),R.drawable.profile);
 
-        mPhoto.setImageBitmap(Utils.getRoundedShape(photo));
-        mName.setText("Fer Villanueva");
+        //mPhoto.setImageBitmap(Utils.getRoundedShape(photo));
+        mName.setText(Session.getUserSession().getUsername());
+        mEmail.setText(Session.getUserSession().getEmail());
     }
 
     @Override
@@ -112,7 +116,7 @@ public class ActivityBase extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
             case R.id.nav_sowing_harvesting:
-                intent = new Intent(this, ActivitySowingHarvesting.class);
+                intent = new Intent(this, ActivityFilter.class);
                 startActivity(intent);
                 break;
         }

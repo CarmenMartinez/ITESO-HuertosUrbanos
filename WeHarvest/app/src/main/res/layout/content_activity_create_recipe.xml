@@ -23,6 +23,17 @@
             style="@style/textTitle"
             android:layout_marginTop="10dp"
             android:text="@string/create_title" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/simpleText"
+            android:text="@string/create_type" />
+        <Spinner
+            android:id="@+id/activity_create_recipe_type"
+            android:layout_width="@dimen/activity_login_edit_text_dimen"
+            android:layout_height="wrap_content"
+            style="@style/textTitle"
+            android:entries="@array/types_recipes"/>
 
         <EditText
             android:id="@+id/activity_create_recipe_title"
@@ -31,19 +42,7 @@
             android:hint="@string/create_recipe_hint"
             android:inputType="text"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/simpleText"
-            android:text="@string/create_type" />
 
-
-        <Spinner
-            android:id="@+id/activity_create_recipe_type"
-            android:layout_width="@dimen/activity_login_edit_text_dimen"
-            android:layout_height="wrap_content"
-            style="@style/textTitle"
-            android:entries="@array/types_recipes"/>
 
         <EditText
             android:id="@+id/activity_create_recipe_content"

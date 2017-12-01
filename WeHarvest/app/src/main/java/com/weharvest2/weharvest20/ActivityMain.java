@@ -21,8 +21,7 @@ import com.weharvest2.weharvest20.gui.ActivityBase;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ActivityMain extends ActivityBase
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class ActivityMain extends ActivityBase {
 
     protected FloatingActionButton create;
     protected ArrayList<Recipe> recipes;

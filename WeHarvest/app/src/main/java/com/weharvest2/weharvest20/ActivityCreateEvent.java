@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.app.DatePickerDialog;
+
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -53,6 +56,37 @@ public class ActivityCreateEvent extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+
+    }
+
+    public void onClick(View v){
+        showDatePickerDialog(v);
+    }
+
+    public void showDatePickerDialog(View v) {
+        //DatePickerFragment newFragment = new DatePickerFragment();
+        //newFragment.show(getSupportFragmentManager(), "datePicker");
+        DatePickerFragment newFragment = DatePickerFragment.newInstance(new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                // +1 because january is zero
+                String selectedDate = "";
+                if (day < 10) {
+                    selectedDate = "0" + day;
+                } else {
+                    selectedDate = day + "";
+                }
+                if((month + 1) < 10){
+                    selectedDate += "/0" + (month + 1);
+                }else {
+                    selectedDate += "/" + (month + 1);
+                }
+                selectedDate += "/" + year;
+
+                date.setText(selectedDate);
+            }
+        });
+        newFragment.show(getSupportFragmentManager(), "datePicker");
 
     }
 }
