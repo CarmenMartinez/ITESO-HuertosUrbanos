@@ -24,6 +24,9 @@
             android:name=".ActivityCreateRecipe"
             android:label="Recipes"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ActivityShowFilter"
+            android:label="Show Filter"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".ActivityProfile"
             android:label="Profile"
@@ -60,7 +63,10 @@
             android:name=".ActivityVerticalOrchard"
             android:label="Vertical Orchard"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
+        <activity
+            android:name=".ActivitySingleCard"
+            android:label="Single Card"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ActivityInitSlides"
             android:theme="@style/AppTheme.NoActionBar">
