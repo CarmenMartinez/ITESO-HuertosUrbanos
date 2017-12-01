@@ -24,7 +24,7 @@ import java.util.Collections;
 
 public class ActivityVerticalOrchard extends ActivityBase {
     private RecyclerView recyclerView;
-    private RecipeAdapter adapter;
+    private RecipeFilteredAdapter adapter;
     private ArrayList<Recipe> recipes;
     protected TextView empty;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -56,7 +56,7 @@ public class ActivityVerticalOrchard extends ActivityBase {
                 Collections.reverse(recipes);
 
                 if (!recipes.isEmpty()) {
-                    adapter = new RecipeAdapter(getApplicationContext(), recipes);
+                    adapter = new RecipeFilteredAdapter(getApplicationContext(), recipes);
 
                     RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
                     recyclerView.setLayoutManager(mLayoutManager);
