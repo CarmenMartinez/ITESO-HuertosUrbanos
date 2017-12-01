@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.weharvest2.weharvest20.ActivityAboutUs;
 import com.weharvest2.weharvest20.ActivityEvents;
+import com.weharvest2.weharvest20.ActivityFilter;
 import com.weharvest2.weharvest20.ActivityLogin;
 import com.weharvest2.weharvest20.ActivityMain;
 import com.weharvest2.weharvest20.ActivityProfile;
@@ -115,7 +116,7 @@ public class ActivityBase extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
                 break;
             case R.id.nav_sowing_harvesting:
-                intent = new Intent(this, ActivitySowingHarvesting.class);
+                intent = new Intent(this, ActivityFilter.class);
                 startActivity(intent);
                 break;
         }
