@@ -30,7 +30,7 @@
     <dimen name="title_padding">10dp</dimen>
     <dimen name="recipe_title">20dp</dimen>
     <dimen name="recipe_description_padding_bottom">5dp</dimen>
-    <dimen name="recipe_description">18dp</dimen>
+    <dimen name="recipe_description">16dp</dimen>
     <dimen name="recipe_username">16dp</dimen>
     <dimen name="recipe_date">14dp</dimen>
     <dimen name="recipe_category">14dp</dimen>

@@ -48,4 +48,15 @@
         <item>@color/dot_dark_screen4</item>
     </array>
 
+    <color name="greenBase">#43a047</color>
+    <color name="greenLight">#76d275</color>
+    <color name="greenDark">#00701a</color>
+    <color name="orangeBase">#ffa000</color>
+    <color name="orangeLight">#ffd149</color>
+    <color name="orangeDark">#c67100</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="grayBackground">#e0e0e0</color>
+
+
 </resources>
