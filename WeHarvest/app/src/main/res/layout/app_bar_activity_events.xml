@@ -32,5 +32,5 @@
         app:backgroundTint="@color/greenThemeForButtons"
         android:src="@mipmap/add"
         android:onClick="createEvent" />
-    
+
 </android.support.design.widget.CoordinatorLayout>
