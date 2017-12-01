@@ -50,6 +50,18 @@
             android:paddingLeft="15dp"/>
 
         <TextView
+            android:id="@+id/event_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="28 de Noviembre"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/date"
+            android:layout_below="@id/event_name"
+            android:paddingLeft="15dp"/>
+
+        <TextView
             android:id="@+id/event_place"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,7 +70,7 @@
             android:textColor="@android:color/darker_gray"
             android:textStyle="bold"
             android:layout_toRightOf="@id/date"
-            android:layout_below="@id/event_name"
+            android:layout_below="@id/event_year"
             android:paddingLeft="15dp"/>
 
     </RelativeLayout>

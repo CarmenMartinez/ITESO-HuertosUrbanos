@@ -26,7 +26,7 @@ import java.util.Collections;
 public class ActivityCompound extends ActivityBase{
 
     private RecyclerView recyclerView;
-    private RecipeAdapter adapter;
+    private RecipeFilteredAdapter adapter;
     private ArrayList<Recipe> recipes;
     protected TextView empty;
     DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -58,7 +58,7 @@ public class ActivityCompound extends ActivityBase{
                 Collections.reverse(recipes);
 
                 if (!recipes.isEmpty()) {
-                    adapter = new RecipeAdapter(getApplicationContext(), recipes);
+                    adapter = new RecipeFilteredAdapter(getApplicationContext(), recipes);
 
                     RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
                     recyclerView.setLayoutManager(mLayoutManager);
@@ -69,8 +69,6 @@ public class ActivityCompound extends ActivityBase{
                     empty.setVisibility(View.GONE);
                 } else
                     empty.setText("Create Compound recipes to see them here!");
-
-
             }
 
             @Override

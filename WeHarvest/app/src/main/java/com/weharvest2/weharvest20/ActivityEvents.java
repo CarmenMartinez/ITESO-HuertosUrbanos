@@ -30,6 +30,7 @@ import com.weharvest2.weharvest20.beans.Event;
 import com.weharvest2.weharvest20.gui.ActivityBase;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 
 public class ActivityEvents extends ActivityBase {
@@ -56,14 +57,26 @@ public class ActivityEvents extends ActivityBase {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot){
                 events = new ArrayList<>();
+                Calendar calendar = Calendar.getInstance();
+
+                int thisYear = calendar.get(Calendar.YEAR);
+                int thisMonth = calendar.get(Calendar.MONTH);
+                int thisDay = calendar.get(Calendar.DAY_OF_MONTH);
+
                 Iterable<DataSnapshot> contactChildren = dataSnapshot.getChildren();
                 for (DataSnapshot event : contactChildren) {
                     Event newEvent = event.getValue(Event.class);
-                    events.add(newEvent);
+                    String eventDate = newEvent.getDate();
+                    int eventYear = Integer.parseInt(eventDate.substring(6,10));
+                    int eventMonth = Integer.parseInt(eventDate.substring(3,5));
+                    int eventDay = Integer.parseInt(eventDate.substring(0,2));
+                    Toast.makeText(getApplicationContext(), thisDay + "<" + eventDay, Toast.LENGTH_LONG).show();
+                    if (thisYear < eventYear || (thisYear == eventYear && thisMonth < eventMonth)
+                            || (thisYear == eventYear && thisMonth == eventMonth && thisDay < eventDay))
+                        events.add(newEvent);
 
                 }
                 Collections.reverse(events);
-
 
                 adapter = new EventAdapter(getApplicationContext(), events);
 
