@@ -21,7 +21,6 @@
             android:textColor="@android:color/white"
             />
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,7 +30,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="We are a company that cares about creating solutions that help your health and the envrionment. "
-            style="@style/simpleText"/>
+            android:text="We are a company that cares about creating solutions that help your health and the environment. Our mission is to create a community that collaborates each other in the creation of their own urban farms by sharing recipes, learning from known databases and getting together during different events."
+            android:padding="@dimen/desc_padding"
+            android:layout_gravity="center_vertical|center"
+            android:background="#ffa000"
+            android:textSize="16sp"
+            android:gravity="bottom"
+            />
 
     </LinearLayout>
